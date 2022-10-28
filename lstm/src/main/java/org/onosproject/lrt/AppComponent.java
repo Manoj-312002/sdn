@@ -182,7 +182,6 @@ public class AppComponent implements SomeInterface {
         installInitRule();
         requestIntercepts();
 
-        //TODO: call as separate thread
         sendInitPacket();
 
         log.info("Started", appId.id());
@@ -268,56 +267,51 @@ public class AppComponent implements SomeInterface {
     }
 
     public void sendInitPacket(){
-        while(true){
-            for( Host hs : hostService.getHosts() ){
-                String ipsS = getNearbyNodes(hs);
-    
-                // create an ethernet packet
-                Ethernet ethInfo = new Ethernet();
-                ethInfo.setDestinationMACAddress(hs.mac());
-                ethInfo.setEtherType(Ethernet.TYPE_IPV4);
-                ethInfo.setSourceMACAddress("00:00:00:00:00:00");
-    
-                // ip packet
-                IPv4 ipInfo = new IPv4();
-                ipInfo.setSourceAddress("10.0.0.0");
-                ipInfo.setTtl((byte)64);
-    
-                Set<IpAddress> ips = hs.ipAddresses();
-                for ( IpAddress ip : ips ){
-                    ipInfo.setDestinationAddress(ip.toString());
-                    break;
-                }
-    
-                // udp packet
-                UDP udpInfo = new UDP();
-                udpInfo.setSourcePort(0xED88);
-                udpInfo.setDestinationPort(0x1F40);
-                
-                // setting data 
-                Data dt = new Data();
-                byte[] bt = ipsS.getBytes();
-                dt.setData(bt);
-                udpInfo.setPayload( dt );
-                ipInfo.setPayload(udpInfo);
-                ethInfo.setPayload(ipInfo);
-    
-                TrafficTreatment.Builder builder = DefaultTrafficTreatment.builder();
-                builder.setOutput(hs.location().port());
-                packetService.emit( new DefaultOutboundPacket(hs.location().deviceId(), 
-                    builder.build(), ByteBuffer.wrap(ethInfo.serialize())));
-                
-                // try{
-                //     Thread.sleep(700);
-                // }catch(Exception e){
-                //     log.error("err" , e);
-                // }
+        for( Host hs : hostService.getHosts() ){
+            String ipsS = getNearbyNodes(hs);
+            // create an ethernet packet
+            Ethernet ethInfo = new Ethernet();
+            ethInfo.setDestinationMACAddress(hs.mac());
+            ethInfo.setEtherType(Ethernet.TYPE_IPV4);
+            ethInfo.setSourceMACAddress("00:00:00:00:00:00");
+
+            // ip packet
+            IPv4 ipInfo = new IPv4();
+            ipInfo.setSourceAddress("10.0.0.0");
+            ipInfo.setTtl((byte)64);
+
+            Set<IpAddress> ips = hs.ipAddresses();
+            for ( IpAddress ip : ips ){
+                ipInfo.setDestinationAddress(ip.toString());
+                break;
             }
 
+            // udp packet
+            UDP udpInfo = new UDP();
+            udpInfo.setSourcePort(0xED88);
+            udpInfo.setDestinationPort(0x1F40);
+            
+            // setting data 
+            Data dt = new Data();
+            byte[] bt = ipsS.getBytes();
+            dt.setData(bt);
+            udpInfo.setPayload( dt );
+            ipInfo.setPayload(udpInfo);
+            ethInfo.setPayload(ipInfo);
 
+            TrafficTreatment.Builder builder = DefaultTrafficTreatment.builder();
+            builder.setOutput(hs.location().port());
+            packetService.emit( new DefaultOutboundPacket(hs.location().deviceId(), 
+                builder.build(), ByteBuffer.wrap(ethInfo.serialize())));
+            
+            try{
+                Thread.sleep(700);
+            }catch(Exception e){
+                log.error("err" , e);
+            }
         }
     }
-
+    
     @Deactivate
     public void deactivate() {
         cfgService.unregisterProperties(getClass(), false);

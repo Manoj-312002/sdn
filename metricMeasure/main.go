@@ -11,10 +11,9 @@ var mp map[string][]string
 func main() {
 	// go iperfServ()
 	// get list of host whose details are required
+	ar := udpServer()
+	fmt.Println(ar)
 	for {
-		ar := udpServer()
-		// fmt.Println(ar)
-
 		mp = make(map[string][]string)
 
 		var wg sync.WaitGroup
