@@ -24,7 +24,7 @@ class nycT( Topo ):
 
         for i in topology:
             for j in topology[i]:
-                self.addLink( switches[ int(i)-1 ] , switches[ int(j)-1 ]  )
+                self.addLink( switches[ int(i)-1 ] , switches[ int(j)-1 ] , bw=1 , delay=0.1 )
 
 class ovs( OVSSwitch ):
     def __init__(self, name, failMode='secure', datapath='kernel', inband=False, protocols="OpenFlow13", reconnectms=1000, stp=False, batch=False, **params):
@@ -41,9 +41,12 @@ for i in range(len(topology)):
     # hosts[-1].cmd('echo 0 >/proc/sys/net/ipv4/icmp_echo_ignore_broadcasts')
     hosts[-1].cmd('iperf3 -s &')
     hosts[-1].cmd('/home/manoj/sdn/onos-apps/metricMeasure/metricGen &')
+    # hosts[-1].cmd(f'chmod +x /home/manoj/sdn/onos-apps/traffic/n{i+1}.sh &')
+    # hosts[-1].cmd(f'./home/manoj/sdn/onos-apps/traffic/n{i+1}.sh &')
     # print(x)
 
 net.start()
 net.pingAll()
+
 CLI(net)
 net.stop()

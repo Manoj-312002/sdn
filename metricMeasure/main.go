@@ -14,6 +14,7 @@ func main() {
 	ar := udpServer()
 	fmt.Println(ar)
 	for {
+		// store ip address : metric arrayS
 		mp = make(map[string][]string)
 
 		var wg sync.WaitGroup

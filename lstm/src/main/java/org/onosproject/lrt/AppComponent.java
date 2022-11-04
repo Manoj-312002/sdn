@@ -187,6 +187,7 @@ public class AppComponent implements SomeInterface {
         log.info("Started", appId.id());
     }
 
+
     String getDeviceFromIp(String s){
         for(Host hs : hostService.getHostsByIp(Ip4Address.valueOf(s))){
             return hs.location().deviceId().toString();
@@ -194,7 +195,6 @@ public class AppComponent implements SomeInterface {
         return "";
     }
     
-
     void parsePacketData(String sender , String dt){
         String[] ipData = dt.split("\n");
         for( String ipD : ipData ){
@@ -311,6 +311,8 @@ public class AppComponent implements SomeInterface {
             }
         }
     }
+    
+
     
     @Deactivate
     public void deactivate() {

@@ -1,5 +1,8 @@
 package org.onosproject.lrt;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -15,8 +18,7 @@ public class MetricUpdate {
     
     public Map<String,Integer> mp;
     public Map<Integer,double[]> metrics;
-    int cNodes;
-    int nMetrics;
+    int cNodes ,nMetrics ,nIter;
     double SC = 0.000000001;
 
     /*
@@ -31,6 +33,7 @@ public class MetricUpdate {
         mp = new HashMap<>();
         cNodes = 0;
         nMetrics = 3;
+        nIter = 0;
     }
 
     int getId(String s){
@@ -98,9 +101,27 @@ public class MetricUpdate {
 
     void printMetric(){
         normalise();
-        log.info("Metrics : ");
-        for(int n : metrics.keySet()){
-            System.out.println(n + " " + Arrays.toString(metrics.get(n)));
+        log.info("Network Metrics : ");
+
+        try{
+            File dir = new File("/home/manoj/sdn/onos-apps/lstm/data.csv");
+            FileWriter fstream =  new FileWriter(dir, true);
+            BufferedWriter out = new BufferedWriter(fstream);
+            
+            for(int n : metrics.keySet()){
+                System.out.println(n + " " + Arrays.toString(metrics.get(n)));
+                out.write(n+","+nIter);
+                for(double v : metrics.get(n)){
+                    out.write("," + v);
+                }
+                out.newLine();
+            }
+            nIter += 1;
+            out.close();
+        }catch(Exception e){
+            log.info("Error");
+            log.warn(e.toString());
         }
+
     }
 }
