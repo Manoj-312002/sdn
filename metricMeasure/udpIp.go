@@ -13,8 +13,14 @@ import (
 )
 
 func sendPacket(data string) {
+	InfoL.Println(data)
 	a, _ := net.Interfaces()
-	adrs, _ := a[1].Addrs()
+	adrs, err := a[1].Addrs()
+
+	if err != nil {
+		ErrorL.Println(err)
+	}
+
 	ipv4adrs := strings.Split(adrs[0].String(), "/")[0]
 	dt_pkt := raw.Make()
 	dt_pkt.Data = []byte(data)
@@ -58,5 +64,8 @@ func sendPacket(data string) {
 	addr.Ifindex = a[1].Index
 	addr.Hatype = syscall.ARPHRD_ETHER
 
-	syscall.Sendto(fd, dt, 0, &addr)
+	err = syscall.Sendto(fd, dt, 0, &addr)
+	if err != nil {
+		ErrorL.Println(err)
+	}
 }

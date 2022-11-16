@@ -1,40 +1,36 @@
 package main
 
 import (
-	"fmt"
 	"sync"
-	"time"
 )
 
-var mp map[string][]string
+var ipMetric map[string][]int
+var ipCount map[string]int
+var chmp map[string]chan bool // for each host a timeout is kept
 
 func main() {
-	// go iperfServ()
-	// get list of host whose details are required
-	ar := udpServer()
-	fmt.Println(ar)
+	ipMetric = make(map[string][]int)
+	ipCount = make(map[string]int)
+	chmp = make(map[string]chan bool)
+
+	logFile()
+
+	go metricServer()
 	for {
-		// store ip address : metric arrayS
-		mp = make(map[string][]string)
+		// wait for info from co ntroller
+		ar := controllerServer()
+		// InfoL.Println("Nearby host : ", ar)
 
 		var wg sync.WaitGroup
 
 		for _, hs := range ar {
 			wg.Add(1)
 			go func(hs string) {
-				pingHost(hs)
+				mPacket(hs)
 				wg.Done()
 			}(hs)
 		}
 
-		for _, hs := range ar {
-			ipefClient(hs)
-		}
-
 		wg.Wait()
-		udpClient()
-		fmt.Println(mp)
-
-		time.Sleep(5 * time.Second)
 	}
 }

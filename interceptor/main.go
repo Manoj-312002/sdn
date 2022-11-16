@@ -1,5 +1,9 @@
 package main
 
+import (
+	"fmt"
+)
+
 type PHttpServer struct {
 }
 
@@ -14,13 +18,14 @@ func main() {
 	// })
 
 	// log.Fatal(http.ListenAndServe("127.0.0.1:8080", proxy))
-	sendPacket([]byte("sdf"))
+
 	// a, _ := net.Interfaces()
 	// for _, i := range a {
 	// 	fmt.Println(i.Name)
 	// }
-	// adrs, _ := a[15].Addrs()
-	// ipv4adrs := strings.Split(adrs[0].String(), "/")[0]
-	// fmt.Println(a[15].Name)
-	// fmt.Println(ipv4adrs)
+
+	// sendPacket([]byte("sdf"), 19)
+	for i := 0; i < 10; i++ {
+		fmt.Println(i)
+	}
 }

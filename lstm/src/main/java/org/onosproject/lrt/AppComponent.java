@@ -20,7 +20,6 @@ import com.google.common.collect.ImmutableSet;
 import org.onlab.metrics.MetricsService;
 import org.onlab.packet.Data;
 import org.onlab.packet.Ethernet;
-import org.onlab.packet.IPacket;
 import org.onlab.packet.IPv4;
 import org.onlab.packet.Ip4Address;
 import org.onlab.packet.Ip4Prefix;
@@ -28,7 +27,6 @@ import org.onlab.packet.IpAddress;
 import org.onlab.packet.MacAddress;
 import org.onlab.packet.UDP;
 import org.onlab.packet.VlanId;
-import org.onlab.util.Bandwidth;
 import org.onosproject.cfg.ComponentConfigService;
 import org.onosproject.core.ApplicationId;
 import org.onosproject.core.CoreService;
@@ -37,7 +35,6 @@ import org.onosproject.net.ConnectPoint;
 import org.onosproject.net.DeviceId;
 import org.onosproject.net.Host;
 import org.onosproject.net.HostId;
-import org.onosproject.net.HostLocation;
 import org.onosproject.net.Link;
 import org.onosproject.net.Path;
 import org.onosproject.net.PortNumber;
@@ -64,17 +61,10 @@ import org.onosproject.net.packet.PacketContext;
 import org.onosproject.net.packet.PacketPriority;
 import org.onosproject.net.packet.PacketProcessor;
 import org.onosproject.net.packet.PacketService;
-import org.onosproject.net.resource.ContinuousResource;
-import org.onosproject.net.resource.DiscreteResourceId;
-import org.onosproject.net.resource.ResourceQueryService;
-import org.onosproject.net.resource.Resources;
 import org.onosproject.net.statistic.PortStatisticsService;
-import org.onosproject.net.statistic.PortStatisticsService.MetricType;
 import org.onosproject.net.topology.TopologyEvent;
-import org.onosproject.net.topology.TopologyGraph;
 import org.onosproject.net.topology.TopologyListener;
 import org.onosproject.net.topology.TopologyService;
-import org.onosproject.net.topology.TopologyVertex;
 import org.onosproject.store.service.StorageService;
 import org.osgi.service.component.ComponentContext;
 import org.osgi.service.component.annotations.Activate;
@@ -87,15 +77,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.nio.ByteBuffer;
-import java.util.Arrays;
+import java.util.Timer;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
+import java.util.TimerTask;
 import java.util.concurrent.ExecutorService;
 
-import javax.validation.constraints.Null;
 
 import static java.util.concurrent.Executors.newSingleThreadExecutor;
 import static org.onlab.util.Tools.groupedThreads;
@@ -104,12 +94,9 @@ import static org.onlab.util.Tools.groupedThreads;
  * Sample reactive forwarding application.
  */
 @Component(
-    immediate = true,
-    service = {SomeInterface.class},
-    property = {
-        "someProperty=Some Default String Value",
-})
-public class AppComponent implements SomeInterface {
+    immediate = true
+)
+public class AppComponent {
 
     private final Logger log = LoggerFactory.getLogger(getClass());
     
@@ -148,7 +135,6 @@ public class AppComponent implements SomeInterface {
 
     private ReactivePacketProcessor processor = new ReactivePacketProcessor();
     private ApplicationId appId;
-    private String someProperty;
     private final TopologyListener topologyListener = new InternalTopologyListener();
     private ExecutorService blackHoleExecutor;
 
@@ -161,7 +147,7 @@ public class AppComponent implements SomeInterface {
     private Integer flowTimeout = 10;
 
     public MetricUpdate mU;
-    int ct;
+    public Timer timer = new Timer();
 
     @Activate
     public void activate(ComponentContext context) {
@@ -169,25 +155,23 @@ public class AppComponent implements SomeInterface {
             groupedThreads("onos/app/lstm", "black-hole-fixer",
             log));
 
-        cfgService.registerProperties(getClass());
+        // cfgService.registerProperties(getClass());
         mU = new MetricUpdate(5);
         appId = coreService.registerApplication("org.onosproject.lrt");
 
         packetService.addProcessor(processor, PacketProcessor.director(2));
         topologyService.addListener(topologyListener);
-        ct = 0;
-
+        
         log.info("Debug Mode");
         
         installInitRule();
         requestIntercepts();
-
-        sendInitPacket();
+        timer.schedule(new Task(), 0, 7000);
 
         log.info("Started", appId.id());
     }
 
-
+    // returns device name from ip address
     String getDeviceFromIp(String s){
         for(Host hs : hostService.getHostsByIp(Ip4Address.valueOf(s))){
             return hs.location().deviceId().toString();
@@ -196,23 +180,14 @@ public class AppComponent implements SomeInterface {
     }
     
     void parsePacketData(String sender , String dt){
-        String[] ipData = dt.split("\n");
-        for( String ipD : ipData ){
-            String [] recv = ipD.split(":");
-            String [] metrics = recv[1].split(",");
+        String [] recv = dt.split(":");
+        String [] metrics = recv[1].split(",");
 
-            String s1 = getDeviceFromIp(sender);
-            String s2 = getDeviceFromIp(recv[0]);
+        String s1 = getDeviceFromIp(sender);
+        String s2 = getDeviceFromIp(recv[0]);
 
-            mU.addEdge(s1 , s2 , 0 ,Double.valueOf(metrics[0]) );
-            mU.addEdge(s1 , s2 , 1 ,Double.valueOf(metrics[1]) );
-        }
-        ct += 1;
-        
-        if(ct % 5 == 0){
-            getBandwidth();
-            mU.printMetric();
-        }
+        mU.addEdge(s1 , s2 , 0 ,Double.valueOf(metrics[0]) );
+        mU.addEdge(s1 , s2 , 1 ,Double.valueOf(metrics[1]) );
     }
 
     void getBandwidth(){
@@ -227,6 +202,23 @@ public class AppComponent implements SomeInterface {
         }
     }
 
+    // ran every 7 seconds
+    class Task extends TimerTask {
+ 
+        @Override
+        public void run() {
+            sendInitPacket();
+            try{
+                Thread.sleep(2000);
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+            getBandwidth();
+            mU.printMetric();
+        }
+    }
+ 
+    // directs all packets with mac addrs 00:00:00:00:00:00 to controller
     public void installInitRule(){
         TrafficSelector.Builder selectorBuilder = DefaultTrafficSelector.builder();
         selectorBuilder.matchEthDst(MacAddress.valueOf("00:00:00:00:00:00"));
@@ -304,15 +296,9 @@ public class AppComponent implements SomeInterface {
             packetService.emit( new DefaultOutboundPacket(hs.location().deviceId(), 
                 builder.build(), ByteBuffer.wrap(ethInfo.serialize())));
             
-            try{
-                Thread.sleep(700);
-            }catch(Exception e){
-                log.error("err" , e);
-            }
         }
     }
     
-
     
     @Deactivate
     public void deactivate() {
@@ -324,6 +310,10 @@ public class AppComponent implements SomeInterface {
         blackHoleExecutor.shutdown();
         blackHoleExecutor = null;
         processor = null;
+        timer.cancel();
+        timer = null;
+        mU = null;
+        
         log.info("Stopped");
     }
 
@@ -332,27 +322,21 @@ public class AppComponent implements SomeInterface {
         requestIntercepts();
     }
 
-    /**
-     * Request packet in via packet service.
-     */
+    //Request packet in via packet service.
     private void requestIntercepts() {
         TrafficSelector.Builder selector = DefaultTrafficSelector.builder();
         selector.matchEthType(Ethernet.TYPE_IPV4);
         packetService.requestPackets(selector.build(), PacketPriority.REACTIVE, appId);
     }
 
-    /**
-     * Cancel request for packet in via packet service.
-     */
+    // Cancel request for packet in via packet service.
     private void withdrawIntercepts() {
         TrafficSelector.Builder selector = DefaultTrafficSelector.builder();
         selector.matchEthType(Ethernet.TYPE_IPV4);
         packetService.cancelPackets(selector.build(), PacketPriority.REACTIVE, appId);
     }
 
-    /**
-     * Packet processor responsible for forwarding packets along their paths.
-     */
+    // Packet processor responsible for forwarding packets along their paths.
     private class ReactivePacketProcessor implements PacketProcessor {
 
         @Override
@@ -490,10 +474,7 @@ public class AppComponent implements SomeInterface {
 
     // Install a rule forwarding the packet to the specified port.
     private void installRule(PacketContext context, PortNumber portNumber ) {
-        //
-        // We don't support (yet) buffer IDs in the Flow Service so
-        // packet out first.
-        //
+        
         Ethernet inPkt = context.inPacket().parsed();
         TrafficSelector.Builder selectorBuilder = DefaultTrafficSelector.builder();
 
@@ -503,12 +484,6 @@ public class AppComponent implements SomeInterface {
             return;
         }
 
-        //
-        // If matchDstMacOnly
-        //    Create flows matching dstMac only
-        // Else
-        //    Create flows with default matching and include configured fields
-        //
         if (matchDstMacOnly) {
             selectorBuilder.matchEthDst(inPkt.getDestinationMAC());
         } else {
@@ -565,10 +540,10 @@ public class AppComponent implements SomeInterface {
         }
     }
 
-
     private class InternalTopologyListener implements TopologyListener {
         @Override
         public void event(TopologyEvent event) {
+            @SuppressWarnings("rawtypes")
             List<Event> reasons = event.reasons();
             if (reasons != null) {
                 reasons.forEach(re -> {
@@ -731,10 +706,5 @@ public class AppComponent implements SomeInterface {
         }
     }
 
-
-    @Override
-    public void someMethod() {
-        log.info("Invoked");
-    }
 
 }

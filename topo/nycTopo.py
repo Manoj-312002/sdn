@@ -2,7 +2,7 @@
 from asyncio import protocols
 import json
 from operator import imod
-topology = json.load( open('./topo1.json', 'r') )
+topology = json.load( open('./topo2.json', 'r') )
 
 from mininet.topo import Topo
 from mininet.net import Mininet

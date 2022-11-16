@@ -3,6 +3,7 @@ package org.onosproject.lrt;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -18,6 +19,9 @@ public class MetricUpdate {
     
     public Map<String,Integer> mp;
     public Map<Integer,double[]> metrics;
+    public Map<Integer,double[]> norm_metrics;
+    public Map<Integer, ArrayList<double[]> > dt_buffer;
+
     int cNodes ,nMetrics ,nIter;
     double SC = 0.000000001;
 
@@ -30,7 +34,12 @@ public class MetricUpdate {
     MetricUpdate(int x){
         nNode = x;
         metrics = new HashMap<>();
+        norm_metrics = new HashMap<>();
+        dt_buffer = new HashMap<>();
+        
+        // map of all switch devices to the id
         mp = new HashMap<>();
+        // number of switches
         cNodes = 0;
         nMetrics = 3;
         nIter = 0;
@@ -38,6 +47,7 @@ public class MetricUpdate {
 
     int getId(String s){
         if(mp.containsKey(s)){
+            dt_buffer.put( mp.get(s) , new ArrayList<>());
             return mp.get(s);
         }else{
             mp.put(s, cNodes);
@@ -52,6 +62,7 @@ public class MetricUpdate {
        
         if(!metrics.containsKey(e1*nNode +e2)){
             metrics.put(e1*nNode + e2, new double[nMetrics]);
+            norm_metrics.put(e1*nNode + e2, new double[nMetrics]);
         }
 
         metrics.get(e1*nNode +e2)[metricType] = val;
@@ -77,8 +88,9 @@ public class MetricUpdate {
 
         for(int i : metrics.keySet()){
             for(int j = 0; j < nMetrics; j++){
-                metrics.get(i)[j] = metrics.get(i)[j]/(normVal[j]+SC);
-                entropy[j] *= (metrics.get(i)[j] * Math.log(metrics.get(i)[j] + SC));
+                // square root normalization happens here
+                norm_metrics.get(i)[j] = metrics.get(i)[j]/(normVal[j]+SC);
+                entropy[j] *= (norm_metrics.get(i)[j] * Math.log(norm_metrics.get(i)[j] + SC));
             }
         }
         log.info(Arrays.toString(entropy));
@@ -94,24 +106,28 @@ public class MetricUpdate {
 
         for(int i : metrics.keySet()){
             for(int j = 0; j < nMetrics; j++){
-                metrics.get(i)[j] = metrics.get(i)[j]*entropy[j];
+                // entropy weighting 
+                norm_metrics.get(i)[j] = norm_metrics.get(i)[j]*entropy[j];
             }
         }
     }
 
+    void addToBuffer(){
+
+    }
+
     void printMetric(){
         normalise();
-        log.info("Network Metrics : ");
-
+        log.info("Norm Metrics");
         try{
             File dir = new File("/home/manoj/sdn/onos-apps/lstm/data.csv");
             FileWriter fstream =  new FileWriter(dir, true);
             BufferedWriter out = new BufferedWriter(fstream);
             
-            for(int n : metrics.keySet()){
-                System.out.println(n + " " + Arrays.toString(metrics.get(n)));
+            for(int n : norm_metrics.keySet()){
+                System.out.println(n + " " + Arrays.toString(norm_metrics.get(n)));
                 out.write(n+","+nIter);
-                for(double v : metrics.get(n)){
+                for(double v : norm_metrics.get(n)){
                     out.write("," + v);
                 }
                 out.newLine();
@@ -123,5 +139,14 @@ public class MetricUpdate {
             log.warn(e.toString());
         }
 
+        log.info("Metrics : ");
+        for(int n : metrics.keySet()){
+            System.out.println(n + " " + Arrays.toString(metrics.get(n)));
+        }
+
+        for(int n : metrics.keySet()){
+            metrics.get(n)[0] = 100000d;
+            metrics.get(n)[1] = 10000d;
+        }
     }
 }

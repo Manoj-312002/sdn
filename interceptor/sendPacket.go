@@ -13,8 +13,7 @@ import (
 	"github.com/ghedo/go.pkt/packet/udp"
 )
 
-func sendPacket(data []byte) {
-	idx := 19
+func sendPacket(data []byte, idx int) {
 	a, _ := net.Interfaces()
 	fmt.Println(a[idx].Name)
 	adrs, _ := a[idx].Addrs()
