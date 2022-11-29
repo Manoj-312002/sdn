@@ -1,19 +1,19 @@
 {
 	"folders": [
 		{
-			"path": "grusdn"
-		},
-		{
-			"path": "lstm"
-		},
-		{
 			"path": "topo"
 		},
 		{
-			"path": "gru_network"
+			"path": "metricMeasure"
 		},
 		{
-			"path": "metricMeasure"
+			"path": "gru_local"
+		},
+		{
+			"path": "network_data"
+		},
+		{
+			"path": "app"
 		}
 	],
 	"settings": {
