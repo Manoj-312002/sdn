@@ -36,7 +36,6 @@ public class MetricUpdate {
     // linked list of data sequence,( nNode *2 x nMetrics ) (10 x 3)
     public LinkedList<float[][]> dt_buffer;
     public ArrayList<Integer> sorted_list;
-    public boolean first_event;
 
     int cNodes ,nMetrics ,nIter, bufferCount , nSeq;
     float SC = 0.0000001f;
@@ -62,7 +61,6 @@ public class MetricUpdate {
         // number of switches
         cNodes = 0;
         nMetrics = 3; nIter = 0; bufferCount = 0; nSeq = 5;
-        first_event = true;
 
         try{
             env = OrtEnvironment.getEnvironment();
@@ -109,7 +107,7 @@ public class MetricUpdate {
         for(int i = 0; i < nMetrics; i++){
             normVal[i] = (float) Math.sqrt(normVal[i]);
         }
-        log.info(Arrays.toString(normVal));
+        // log.info("Norm Value " + Arrays.toString(normVal));
         
         float entropy[] = new float[nMetrics];
         int ct = metrics.size();
@@ -122,7 +120,7 @@ public class MetricUpdate {
                 entropy[j] *= (norm_metrics.get(i)[j] * Math.log(norm_metrics.get(i)[j] + SC));
             }
         }
-        log.info(Arrays.toString(entropy));
+        // log.info("Entropy Value" + Arrays.toString(entropy));
 
         float sm = 0;
         for(int i = 0; i < nMetrics; i++){
@@ -150,15 +148,20 @@ public class MetricUpdate {
             i += 1;
         }
         dt_buffer.add(temp);
-
+        
         if( bufferCount == nSeq ){
             dt_buffer.removeFirst();
         }else{
             bufferCount += 1;
         }
+        log.info("Buffer count : " + bufferCount);
     }
 
     void predict() throws Exception{
+        if( bufferCount < nSeq ){
+            return;
+        }
+
         float [][][] temp = new float [nNode*2][nSeq][];
         // newly added data should have sq = 0
         int sq = 0;
@@ -198,7 +201,7 @@ public class MetricUpdate {
             BufferedWriter out = new BufferedWriter(fstream);
             
             for(int n : mt.keySet()){
-                log.info(n + " " + Arrays.toString(mt.get(n)));
+                // log.info(n + " " + Arrays.toString(mt.get(n)));
                 out.write(n + "," + nIter);
                 for(float v : mt.get(n)){
                     out.write("," + v);
@@ -214,12 +217,9 @@ public class MetricUpdate {
 
     void predValues(){
         normalise();
-
-        if(first_event){
-            sorted_list = new ArrayList<>(norm_metrics.keySet());
-            Collections.sort(sorted_list);
-            first_event = false;
-        }
+        
+        sorted_list = new ArrayList<>(norm_metrics.keySet());
+        Collections.sort(sorted_list);
 
         log.info("Norm Metrics");
         printMetrics(true);
@@ -240,9 +240,9 @@ public class MetricUpdate {
         }
 
         log.info("Predicted Metrics : ");
-        for(int n : pred_vals.keySet()){
-            log.info(n + " " + Arrays.toString(pred_vals.get(n)));
-        }
+        // for(int n : pred_vals.keySet()){
+        //     log.info(n + " " + Arrays.toString(pred_vals.get(n)));
+        // }
 
         // if the metrics is not getting updated in the next iteration it 
         // should have maximum value

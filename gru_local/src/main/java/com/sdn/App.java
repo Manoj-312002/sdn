@@ -17,6 +17,7 @@ import ai.onnxruntime.OrtSession.Result;
  * Hello world!
  *
  */
+import java.util.*;
 public class App {
     public static void main( String[] args )throws Exception{
         // Path modelDir = Paths.get("/home/manoj/sdn/onos-apps/gru_network/gru_star_10000_1_5_5.zip");
@@ -50,10 +51,10 @@ public class App {
         // System.out.println(Arrays.toString(b));
 
         var env = OrtEnvironment.getEnvironment();
-        var session = env.createSession("/home/manoj/sdn/onos-apps/grusdn/gru_model.onnx",new OrtSession.SessionOptions());
+        var session = env.createSession("/home/manoj/sdn/onos-apps/gru_local/gru_model.onnx",new OrtSession.SessionOptions());
 
 
-        float[][][] testData = new float[5][9][3];
+        float[][][] testData = new float[9][5][3];
         
         String inputName = session.getInputNames().iterator().next();
         OnnxTensor test = OnnxTensor.createTensor(env, testData);
@@ -63,7 +64,14 @@ public class App {
 
         for(int i = 0; i < 9; i++){
             System.out.println(Arrays.toString(op[i]));
-        }
+       }
+       int v = 5;
         
+        List<Map<Integer,Float> > adj = new ArrayList<>(v);
+
+        for(int i = 0; i < v; i++ ){
+            adj.set(i, new HashMap<>());
+            // pr[i] = -1;
+        }
     }
 }

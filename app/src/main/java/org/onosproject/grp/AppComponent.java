@@ -1,5 +1,8 @@
 package org.onosproject.grp;
 
+import org.onlab.graph.DefaultEdgeWeigher;
+import org.onlab.graph.ScalarWeight;
+import org.onlab.graph.Weight;
 import org.onlab.metrics.MetricsService;
 import org.onlab.packet.Data;
 import org.onlab.packet.Ethernet;
@@ -36,7 +39,10 @@ import org.onosproject.net.packet.PacketPriority;
 import org.onosproject.net.packet.PacketProcessor;
 import org.onosproject.net.packet.PacketService;
 import org.onosproject.net.statistic.PortStatisticsService;
+import org.onosproject.net.topology.LinkWeigher;
+import org.onosproject.net.topology.TopologyEdge;
 import org.onosproject.net.topology.TopologyService;
+import org.onosproject.net.topology.TopologyVertex;
 import org.onosproject.store.service.StorageService;
 import org.osgi.service.component.ComponentContext;
 import org.osgi.service.component.annotations.Activate;
@@ -103,21 +109,25 @@ public class AppComponent {
     private boolean packetOutOfppTable = false;
     private Integer flowPriority = 10;
     private Integer flowTimeout = 10;
+    private boolean dijkstras_test = true;
 
     public MetricUpdate mU;
+    public Dijkstras dj;
     public Timer timer = new Timer();
+    int nNode;
 
     @Activate
     public void activate(ComponentContext context) {
         appId = coreService.registerApplication("org.onosproject.grp");
         packetService.addProcessor(processor, PacketProcessor.director(2));
         installInitRule();
-
+        nNode = 5;
         // calling packet processor
         requestIntercepts();
-        timer.schedule(new Task(), 0, 7000);
+        mU = new MetricUpdate(nNode);
+        dj = new Dijkstras(nNode);
         
-        mU = new MetricUpdate(5);
+        timer.schedule(new Task(), 2000, 5000);
     }
 
     // returns device name from ip address
@@ -155,18 +165,31 @@ public class AppComponent {
  
         @Override
         public void run() {
-            sendInitPacket();
             try{
+                sendInitPacket();
                 Thread.sleep(2000);
+                getBandwidth();
+                mU.predValues();
+                log.info("Metrics Updated");
+                // calculateWeights();
             }catch(Exception e){
-                e.printStackTrace();
+                log.info("Error in receiving metrics" + e);
             }
-            getBandwidth();
-            mU.predValues();
-            log.info("Metrics Updated");
         }
     }
- 
+    
+    //** needed when using dijkstras own implementation
+    public void calculateWeights(){
+        // dj.reset(nNode);
+        for(int n : mU.pred_vals.keySet() ){
+            float prev_metric [] =  mU.norm_metrics.get(n);
+            float current_metric [] = mU.pred_vals.get(n);
+
+            float wt = ((prev_metric[0]*0.3f + current_metric[0]*0.7f) + (prev_metric[1]*0.3f + current_metric[1]*0.7f) - (prev_metric[2]*0.3f + current_metric[2]*0.7f) );
+            dj.setWeight(Math.floorDiv(n, nNode), n % nNode, wt);
+        }
+    }
+
     // directs all packets with mac addrs 00:00:00:00:00:00 to controller
     public void installInitRule(){
         TrafficSelector.Builder selectorBuilder = DefaultTrafficSelector.builder();
@@ -261,6 +284,28 @@ public class AppComponent {
         selector.matchEthType(Ethernet.TYPE_IPV4);
         packetService.cancelPackets(selector.build(), PacketPriority.REACTIVE, appId);
     }
+    
+    //**  edge weight determiner
+    private class GruWeigher extends DefaultEdgeWeigher<TopologyVertex, TopologyEdge> implements LinkWeigher {
+        @Override
+        public Weight weight(TopologyEdge edge) {
+            try{
+                int u = mU.getId(edge.src().deviceId().toString());
+                int v = mU.getId(edge.dst().deviceId().toString());
+    
+                int n = u*nNode + v;
+                float prev_metric [] =  mU.norm_metrics.get(n);
+                float current_metric [] = mU.pred_vals.get(n);
+                float wt = ((prev_metric[0]*0.3f + current_metric[0]*0.7f) + (prev_metric[1]*0.3f + current_metric[1]*0.7f) - (prev_metric[2]*0.3f + current_metric[2]*0.7f) );
+                return new ScalarWeight(Math.abs(wt));
+            }catch(Exception e){
+                log.info("Unable to use weights " + e.getMessage());
+                return new ScalarWeight(1.0);
+            }
+        }
+    }
+
+
     // Packet processor responsible for forwarding packets along their paths.
     private class ReactivePacketProcessor implements PacketProcessor {
 
@@ -332,28 +377,57 @@ public class AppComponent {
                 return;
             }
 
-            // Otherwise, get a set of paths that lead from here to the
-            // destination edge switch.
-            Set<Path> paths =
-                    topologyService.getPaths(topologyService.currentTopology(),
-                                             pkt.receivedFrom().deviceId(),
-                                             dst.location().deviceId());
+            //** implementation with self built dijkstras work in progress
+            // try{
+            //     // TODO : Change from here
+            //     // topologyService.getPaths(null, null, null, null)
+            //     dj.shortestPath( mU.getId(pkt.receivedFrom().deviceId().toString()), 
+            //                      mU.getId(dst.location().deviceId().toString())
+            //                     );
+            // }catch(Exception e){
+            //     log.info("Error in dijkstras "+ e);
+            // }
+
+            Set<Path> paths;
+            //** this is general dijstras
+            if( dijkstras_test ){
+                paths = topologyService.getPaths(topologyService.currentTopology(),
+                                                 pkt.receivedFrom().deviceId(),
+                                                 dst.location().deviceId());
+            }
+            //** dijkstras with gru weights
+            else{
+                paths = topologyService.getKShortestPaths(topologyService.currentTopology(),
+                                            pkt.receivedFrom().deviceId(),
+                                            dst.location().deviceId(), new GruWeigher() , 1);
+            }
+
             if (paths.isEmpty()) {
+                //** needed in case of gru weighted dijkstras
+                log.info("Empty paths");
+                paths = topologyService.getPaths(topologyService.currentTopology(),
+                pkt.receivedFrom().deviceId(),
+                dst.location().deviceId());
+            }
+            
+            if(paths.isEmpty()){
                 // If there are no paths, flood and bail.
+                log.info("Really empty");
                 flood(context);
                 return;
             }
             // came from; if no such path, flood and bail.
-
             // Otherwise, pick a path that does not lead back to where we
             Path path = pickForwardPathIfPossible(paths, pkt.receivedFrom().port());
+            
             if (path == null) {
                 // log.warn("Don't know where to go from here {} for {} -> {}",
                 //          pkt.receivedFrom(), ethPkt.getSourceMAC(), ethPkt.getDestinationMAC());
                 flood(context);
                 return;
             }
-
+            
+            log.info(path.toString());
             // Otherwise forward and be done with it.
             installRule(context, path.src().port());
         }
