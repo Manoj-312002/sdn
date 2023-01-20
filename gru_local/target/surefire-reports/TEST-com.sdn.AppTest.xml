@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.sdn.AppTest" time="0.003" tests="0" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/manoj/sdn/onos-apps/grusdn/target/test-classes:/home/manoj/sdn/onos-apps/grusdn/target/classes:/home/manoj/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/manoj/.m2/repository/ai/djl/pytorch/pytorch-engine/0.19.0/pytorch-engine-0.19.0.jar:/home/manoj/.m2/repository/ai/djl/api/0.19.0/api-0.19.0.jar:/home/manoj/.m2/repository/com/google/code/gson/gson/2.9.1/gson-2.9.1.jar:/home/manoj/.m2/repository/net/java/dev/jna/jna/5.12.1/jna-5.12.1.jar:/home/manoj/.m2/repository/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar:"/>
+    <property name="java.vm.vendor" value="Ubuntu"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://ubuntu.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Linux"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="GB"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="/home/manoj/sdn/onos-apps/grusdn/target/surefire/surefirebooter14359361630804686768.jar /home/manoj/sdn/onos-apps/grusdn/target/surefire 2022-11-26T07-24-40_899-jvmRun1 surefire15545196217909388254tmp surefire_06368784290697501982tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/manoj/sdn/onos-apps/grusdn/target/test-classes:/home/manoj/sdn/onos-apps/grusdn/target/classes:/home/manoj/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/manoj/.m2/repository/ai/djl/pytorch/pytorch-engine/0.19.0/pytorch-engine-0.19.0.jar:/home/manoj/.m2/repository/ai/djl/api/0.19.0/api-0.19.0.jar:/home/manoj/.m2/repository/com/google/code/gson/gson/2.9.1/gson-2.9.1.jar:/home/manoj/.m2/repository/net/java/dev/jna/jna/5.12.1/jna-5.12.1.jar:/home/manoj/.m2/repository/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/manoj"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2022-10-18"/>
+    <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/manoj/sdn/onos-apps/grusdn"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/home/manoj/sdn/onos-apps/grusdn/target/surefire/surefirebooter14359361630804686768.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.17+8-post-Ubuntu-1ubuntu222.04"/>
+    <property name="user.name" value="manoj"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.15.0-53-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/manoj/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-lts"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="11.0.17"/>
+    <property name="user.dir" value="/home/manoj/sdn/onos-apps/grusdn"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Ubuntu"/>
+    <property name="java.vm.version" value="11.0.17+8-post-Ubuntu-1ubuntu222.04"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+</testsuite>

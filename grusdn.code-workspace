@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "topo"
+		},
+		{
+			"path": "metricMeasure"
+		},
+		{
+			"path": "gru_local"
+		},
+		{
+			"path": "network_data"
+		},
+		{
+			"path": "app"
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "automatic",
+		"java.compile.nullAnalysis.mode": "automatic"
+	}
+}
