@@ -30,7 +30,7 @@ import static org.slf4j.LoggerFactory.getLogger;
 public class MetricUpdate {
     private final Logger log = getLogger(getClass());
     
-    public int nNode;
+    public int nNode , nLink;
     // ip to device id to switch number (assigned)
     public Map<String,Integer> mp;
     // switch number to current metric
@@ -57,8 +57,9 @@ public class MetricUpdate {
         * 2 - bandwidth
     */
     
-    MetricUpdate(int x){
+    MetricUpdate(int x , int y){
         nNode = x;
+        nLink = y;
         metrics = new HashMap<>();
         norm_metrics = new HashMap<>();
         pred_vals = new HashMap<>();
@@ -180,7 +181,7 @@ public class MetricUpdate {
         * check the order in which it is added to buffer
     */   
     void addToBuffer(){
-        float [][] temp = new float[nNode*2][];
+        float [][] temp = new float[nLink*2][];
         
         int i = 0;
 
@@ -209,12 +210,12 @@ public class MetricUpdate {
             return;
         }
 
-        float [][][] temp = new float [nNode*2][nSeq][];
+        float [][][] temp = new float [nLink*2][nSeq][];
         // newly added data should have sq = 0
         int sq = 0;
         
         for( int j = nSeq - 1; j >= 0; j-- ){
-            for( int i = 0; i < nNode*2; i++){
+            for( int i = 0; i < nLink*2; i++){
                 temp[i][sq] = dt_buffer.get(j)[i];
             }
             sq += 1;

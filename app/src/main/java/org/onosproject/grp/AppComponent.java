@@ -132,17 +132,18 @@ public class AppComponent {
     public MetricUpdate mU;
     public Dijkstras dj;
     public Timer timer = new Timer();
-    int nNode;
+    int nNode , nLink;
 
     @Activate
     public void activate(ComponentContext context) {
         appId = coreService.registerApplication("org.onosproject.grp");
         packetService.addProcessor(processor, PacketProcessor.director(2));
         installInitRule();
-        nNode = 5;
+        nNode = 10;
+        nLink = 16;
         // calling packet processor
         requestIntercepts();
-        mU = new MetricUpdate(nNode);
+        mU = new MetricUpdate(nNode , nLink);
         dj = new Dijkstras(nNode);
         
         timer.schedule(new Task(), 2000, 5000);

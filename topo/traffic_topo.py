@@ -73,7 +73,7 @@ mice_bandwidth_list = ['100K', '200K', '300K', '400K', '500K', '600K', '700K', '
                        '2000K', '3000K', '4000K', '5000K', '6000K', '7000K', '8000K', '9000K', '10000K', '1000K']
 
 
-topology = json.load( open('./topo2.json', 'r') )
+topology = json.load( open('./fat_tree.json', 'r') )
 
 
 
