@@ -284,7 +284,7 @@ class ovs( OVSSwitch ):
 
 topo = nycT()
 setLogLevel( 'info' )
-c1 = RemoteController(name='c1', ip='localhost' , port=6653 , protocols="OpenFlow13"  )
+c1 = RemoteController(name='c1', ip='192.168.56.1' , port=6653 , protocols="OpenFlow13"  )
 net = Mininet(topo=topo , controller=c1 , switch=ovs )
 
 

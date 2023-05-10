@@ -114,7 +114,7 @@ f1 = open("./json/nycbw.txt" , 'r')
 
 topo = nycT()
 setLogLevel( 'info' )
-c1 = RemoteController(name='c1', ip='127.0.0.1' , port=6653 , protocols="OpenFlow13")
+c1 = RemoteController(name='c1', ip='192.168.56.1' , port=6653 , protocols="OpenFlow13")
 # sw = UserSwitch
 net = Mininet(topo=topo , controller=c1 , switch=UserSwitch )
 

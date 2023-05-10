@@ -52,7 +52,7 @@ def bandwidthTest():
     # create network
     topo = ExampleTestTopo()
     sw = UserSwitch
-    c0 = RemoteController( 'c0', ip='127.0.0.1', port=6633 )
+    c0 = RemoteController( 'c0', ip='192.168.56.1', port=6633 )
 
     net = Mininet( topo=topo, switch=sw, controller=c0, autoSetMacs=True, autoStaticArp=False )
     net.start()
