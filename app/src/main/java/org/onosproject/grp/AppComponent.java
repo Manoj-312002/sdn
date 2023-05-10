@@ -11,6 +11,7 @@ import org.onlab.packet.Ip4Address;
 import org.onlab.packet.Ip4Prefix;
 import org.onlab.packet.IpAddress;
 import org.onlab.packet.MacAddress;
+
 import org.onlab.packet.UDP;
 import org.onlab.packet.VlanId;
 import org.onosproject.cfg.ComponentConfigService;
@@ -52,7 +53,6 @@ import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ReferenceCardinality;
 import org.slf4j.Logger;
 import static org.slf4j.LoggerFactory.getLogger;
-
 
 import java.nio.ByteBuffer;
 import java.util.Timer;
@@ -139,8 +139,8 @@ public class AppComponent {
         appId = coreService.registerApplication("org.onosproject.grp");
         packetService.addProcessor(processor, PacketProcessor.director(2));
         installInitRule();
-        nNode = 10;
-        nLink = 16;
+        nNode = 14;
+        nLink = 29;
         // calling packet processor
         requestIntercepts();
         mU = new MetricUpdate(nNode , nLink);
@@ -173,7 +173,7 @@ public class AppComponent {
             for(Link ls :linkService.getDeviceEgressLinks(hs.location().deviceId())){
                 float v1 = portStatisticsService.load(ls.dst()).rate();
                 float v2 = portStatisticsService.load(ls.src()).rate();
-
+                
                 mU.addEdge(ls.src().deviceId().toString(), 
                     ls.dst().deviceId().toString(), 2, (v1+v2)/2);
             }
@@ -328,7 +328,9 @@ public class AppComponent {
                 wt = 1;
                 return new ScalarWeight(Math.abs(wt));
             }catch(Exception e){
-                log.info("Unable to use weights " + e.getMessage());
+                if(mU.bufferCount > 5){
+                    log.info("Unable to use weights " + e.getMessage());
+                }
                 return new ScalarWeight(1.0);
             }
         }
@@ -396,12 +398,13 @@ public class AppComponent {
                 flood(context);
                 return;
             }
-
+            
             // Are we on an edge switch that our destination is on? If so,
             // simply forward out to the destination and bail.
-            if (pkt.receivedFrom().deviceId().equals(dst.location().deviceId())) {
+            if (pkt.receivedFrom().deviceId().equals(dst.location().deviceId()) ) {
                 if (!context.inPacket().receivedFrom().port().equals(dst.location().port())) {
-                    installRule(context, dst.location().port());
+                    // log.info(context.inPacket().toString());
+                    installRule(context, dst.location().port() );
                 }
                 return;
             }
@@ -456,9 +459,9 @@ public class AppComponent {
                 return;
             }
             
-            log.info(path.toString());
+            // log.info(path.toString());
             // Otherwise forward and be done with it.
-            installRule(context, path.src().port());
+            installRule(context, path.src().port()  );
         }
 
     }
@@ -512,9 +515,13 @@ public class AppComponent {
             packetOut(context, portNumber);
             return;
         }
-
+        
         if (matchDstMacOnly) {
             selectorBuilder.matchEthDst(inPkt.getDestinationMAC());
+            // if (isport){
+            //     selectorBuilder.matchTcpDst(TpPort.tpPort(8000));
+            //     // log.info(inPkt.toString());
+            // }
         } else {
             selectorBuilder.matchInPort(context.inPacket().receivedFrom().port())
                     .matchEthSrc(inPkt.getSourceMAC())

@@ -1,0 +1,29 @@
+------------------------------------------------------------
+Server listening on UDP port 65525
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+[  1] local 10.0.0.5 port 65525 connected with 10.0.0.6 port 56813
+[ ID] Interval       Transfer     Bandwidth        Jitter   Lost/Total Datagrams
+[  1] 0.0000-1.0000 sec  1.63 MBytes  13.7 Mbits/sec   0.003 ms 1/1165 (0.086%)
+[  1] 0.0000-1.0000 sec  2 datagrams received out-of-order
+[  1] 1.0000-2.0000 sec  1.62 MBytes  13.6 Mbits/sec   0.001 ms 0/1159 (0%)
+[  1] 2.0000-3.0000 sec  1.62 MBytes  13.6 Mbits/sec   0.002 ms 0/1159 (0%)
+[  1] 3.0000-4.0000 sec  1.62 MBytes  13.6 Mbits/sec   0.006 ms 0/1159 (0%)
+[  1] 4.0000-5.0000 sec  1.63 MBytes  13.6 Mbits/sec   0.001 ms 0/1160 (0%)
+[  1] 5.0000-6.0000 sec  1.62 MBytes  13.6 Mbits/sec   0.002 ms 0/1159 (0%)
+[  1] 6.0000-7.0000 sec  1.62 MBytes  13.6 Mbits/sec   0.010 ms 0/1159 (0%)
+[  1] 7.0000-8.0000 sec  1.62 MBytes  13.6 Mbits/sec   0.028 ms 0/1159 (0%)
+[  1] 7.0000-8.0000 sec  1 datagrams received out-of-order
+[  1] 8.0000-9.0000 sec  1.62 MBytes  13.6 Mbits/sec   0.004 ms 0/1159 (0%)
+[  1] 9.0000-10.0000 sec  1.62 MBytes  13.6 Mbits/sec   0.002 ms 0/1159 (0%)
+[  1] 10.0000-11.0000 sec  1.62 MBytes  13.6 Mbits/sec   0.003 ms 0/1159 (0%)
+[  1] 11.0000-12.0000 sec  1.63 MBytes  13.6 Mbits/sec   0.002 ms 0/1160 (0%)
+[  1] 12.0000-13.0000 sec  1.62 MBytes  13.6 Mbits/sec   0.003 ms 0/1159 (0%)
+[  1] 13.0000-14.0000 sec  1.62 MBytes  13.6 Mbits/sec   0.006 ms 0/1159 (0%)
+[  1] 14.0000-15.0000 sec  1.62 MBytes  13.6 Mbits/sec   0.004 ms 0/1159 (0%)
+[  1] 15.0000-16.0000 sec  1.62 MBytes  13.6 Mbits/sec   0.004 ms 0/1159 (0%)
+[  1] 16.0000-17.0000 sec  1.62 MBytes  13.6 Mbits/sec   0.005 ms 0/1159 (0%)
+[  1] 17.0000-18.0000 sec  1.62 MBytes  13.6 Mbits/sec   0.009 ms 0/1159 (0%)
+[  1] 18.0000-18.9974 sec  1.62 MBytes  13.6 Mbits/sec   0.004 ms 0/1157 (0%)
+[  1] 0.0000-18.9974 sec  30.9 MBytes  13.6 Mbits/sec   0.004 ms 1/22027 (0.0045%)
+[  1] 0.0000-18.9974 sec  3 datagrams received out-of-order

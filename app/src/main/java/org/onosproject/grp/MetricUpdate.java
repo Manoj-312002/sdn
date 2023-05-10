@@ -196,8 +196,8 @@ public class MetricUpdate {
             dt_buffer.removeFirst();
         }else{
             bufferCount += 1;
+            log.info("Buffer count : " + bufferCount);
         }
-        log.info("Buffer count : " + bufferCount);
     }
 
     /*
@@ -267,10 +267,10 @@ public class MetricUpdate {
         Collections.sort(sorted_list);
 
         //** printing metrics to file
-        log.info("Norm Metrics");
+        log.info("Norm Metrics Printed");
         printMetrics(norm_metrics , "/home/manoj/sdn/onos-apps/app/norm_data.csv");
 
-        log.info("Metrics : ");
+        log.info("Metrics Printed");
         printMetrics(metrics , "/home/manoj/sdn/onos-apps/app/metric_data.csv");
         
         try{
