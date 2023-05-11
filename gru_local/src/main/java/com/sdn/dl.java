@@ -1,4 +1,4 @@
-package com.example;
+package com.sdn;
 
 import org.deeplearning4j.nn.conf.MultiLayerConfiguration;
 import org.deeplearning4j.nn.conf.NeuralNetConfiguration;
@@ -11,12 +11,7 @@ import org.nd4j.linalg.factory.Nd4j;
 import org.nd4j.linalg.learning.config.Nesterovs;
 import org.nd4j.linalg.lossfunctions.LossFunctions;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
+public class dl {
     public static void main( String[] args )
     {
         INDArray zeros = Nd4j.zeros(2, 2);

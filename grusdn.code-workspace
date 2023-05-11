@@ -19,11 +19,7 @@
 			"path": "schedule-app"
 		},
 		{
-			"path": "app"
-		},
-		{
-			"name": "demo1",
-			"path": "demo1"
+			"path": "grp-app"
 		}
 	],
 	"settings": {
