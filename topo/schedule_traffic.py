@@ -96,18 +96,18 @@ def generate_flows(id, duration, net, log_dir, bw , src , dst):
 
 def sendStart(id_ref ,priority , bw , src , dst, start , duration):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    sock.sendto(bytes(f"start,{id_ref},{priority},{bw},{src},{dst}", "utf-8"), ("192.168.56.1", 4445))
-    print(f"Starting {id_ref} at {start} ,{src} to {dst} of {bw} MBPS {duration}s long" , time.strftime("%H:%M:%S", time.localtime()))
+    sock.sendto(bytes("start,{0},{1},{2},{3},{4}".format(id_ref,priority,bw,src,dst), "utf-8"), ("192.168.56.1", 4445))
+    # print(f"Starting {id_ref} at {start} ,{src} to {dst} of {bw} MBPS {duration}s long" , time.strftime("%H:%M:%S", time.localtime()))
 
 def stop(id_ref,duration):
     time.sleep(duration)
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    sock.sendto(bytes(f"stop,{id_ref}", "utf-8"), ("192.168.56.1", 4445))
-    print("Stopping" , id_ref , time.strftime("%H:%M:%S", time.localtime())  )
+    sock.sendto(bytes("stop,{0}".format(id_ref), "utf-8"), ("192.168.56.1", 4445))
+    # print("Stopping" , id_ref , time.strftime("%H:%M:%S", time.localtime())  )
 
 def sendDone():
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    sock.sendto(bytes(f"done", "utf-8"), ("192.168.56.1", 4445))
+    sock.sendto(bytes("done", "utf-8"), ("192.168.56.1", 4445))
 
 f1 = open("./json/nycbw.txt" , 'r')
 
