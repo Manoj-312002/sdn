@@ -7,7 +7,6 @@ from mininet.log import setLogLevel, info
 from mininet.topo import Topo
 
 
-
 import os
 import random
 import time

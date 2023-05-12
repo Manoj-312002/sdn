@@ -23,7 +23,7 @@ class ExampleTestTopo( Topo ):
         Topo.__init__( self, **params )
 
         # Create switches and hosts
-        N = 6
+        N = 20
         hosts = [ self.addHost( 'h%s' % h ) for h in irange( 1, N ) ]
         switches = [ self.addSwitch( 's%s' % s ) for s in irange( 1, N ) ]
 
@@ -36,6 +36,7 @@ class ExampleTestTopo( Topo ):
         self.addLink( switches[2], switches[5])
         self.addLink( switches[1], switches[4])
         self.addLink( switches[0], switches[3])
+        self.addLink( switches[11], switches[19])
 
       
         # Wire up hosts
