@@ -1,16 +1,10 @@
 package org.onosproject.scp;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.Timer;
 
-import org.onlab.packet.Data;
 import org.slf4j.Logger;
-
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 
 import ai.onnxruntime.OnnxTensor;
 import ai.onnxruntime.OrtEnvironment;

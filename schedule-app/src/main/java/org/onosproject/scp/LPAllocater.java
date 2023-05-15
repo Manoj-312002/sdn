@@ -1,7 +1,6 @@
 package org.onosproject.scp;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 
 import org.apache.commons.math3.optim.MaxIter;

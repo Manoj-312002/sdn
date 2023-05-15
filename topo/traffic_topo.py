@@ -25,10 +25,10 @@ import random
 import time
 import sys
 import re
-import numpy as np
+# import numpy as np
 
 import json
-np.random.seed(10)
+# np.random.seed(10)
 random.seed(10)
 
 # GLOBAL VARIABLES
@@ -83,7 +83,7 @@ def random_normal_number(low, high):
     range = high - low
     mean = int(float(range) * float(75) / float(100)) + low
     sd = int(float(range) / float(4))
-    num = np.random.normal(mean, sd)
+    num = random.normal(mean, sd)
     return int(num)
 
 
@@ -273,10 +273,10 @@ class nycT( Topo ):
 
         for i in topology:
             for j in topology[i]:
-                bw = np.random.randint(10,100)
-                de = np.random.randint(10,120)
+                bw = random.randint(10,100)
+                # de = np.random.randint(10,120)
 
-                self.addLink( switches[ int(i)-1 ] , switches[ int(j)-1 ] ,cls=TCLink, bw=bw , delay=de ,max_queue_size=10, use_tbf=True )
+                self.addLink( switches[ int(i)-1 ] , switches[ int(j)-1 ] ,cls=TCLink, bw=bw ,max_queue_size=10, use_tbf=True )
 
 class ovs( OVSSwitch ):
     def __init__(self, name, failMode='secure', datapath='kernel', inband=False, protocols="OpenFlow13", reconnectms=1000, stp=False, batch=False, **params):

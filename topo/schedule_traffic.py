@@ -1,18 +1,16 @@
 from mininet.net import Mininet
-from mininet.node import RemoteController , UserSwitch
-from mininet.node import CPULimitedHost
+from mininet.node import RemoteController , UserSwitch , OVSSwitch
 from mininet.link import TCLink
 from mininet.cli import CLI
 from mininet.log import setLogLevel, info
 from mininet.topo import Topo
-
+# from mininet.node import CPULimitedHost
 
 import os
 import random
 import time
 import sys
 import re
-# import numpy as np
 import socket
 import json
 from threading import Thread
@@ -20,16 +18,22 @@ from threading import Thread
 # np.random.seed(10)
 sampling_interval = '1'  # seconds
 topology = json.load( open('./json/nyc.json', 'r') )
-
+repeat = 1
 random.seed(10)
 
+cnv = ['0']
+for i in range(1,len(topology)+1):
+    cnv.append( str(i).zfill(2) )
+
 class nycT( Topo ):
-    def build( self ):
+    def __init__(self, **params ):
+        Topo.__init__(self, **params)
+
         nodes = []
         switches = []
         for i in range(len( topology )):
-            nodes.append( self.addHost('h'+str(i+1) ,  ip="10.0.0." + str(i+1) + "/8" ) , )
-            switches.append( self.addSwitch( 's'+str(i+1) ) )
+            nodes.append( self.addHost('h'+str(i+1) ,  ip="10.0.0." + str(i+1) + "/8"  ) )
+            switches.append( self.addSwitch( name = "s"+str(i+1) , dpid="0"*10 + cnv[i+1] ) )
 
         for i in range(len( topology )):
             self.addLink( nodes[ int(i) ] , switches[ int(i) ] )
@@ -37,14 +41,8 @@ class nycT( Topo ):
         for i in topology:
             for j in topology[i]:
                 bw = int(f1.readline().split(",")[-1])
-                de = random.randint(10,120)
-
-                self.addLink( switches[ int(i)-1 ] , switches[ int(j)-1 ] ,cls=TCLink, bw=bw , delay=de ,max_queue_size=10, use_tbf=True )
-
-
-# class ovs( OVSSwitch ):
-#     def __init__(self, name, failMode='secure', datapath='kernel', inband=False, protocols="OpenFlow13", reconnectms=1000, stp=False, batch=False, **params):
-#         super().__init__(name, failMode, datapath, inband, protocols, reconnectms, stp, batch, **params)
+                # de = random.randint(10,120)
+                self.addLink( switches[ int(i)-1 ] , switches[ int(j)-1 ] , cls=TCLink , bw=bw )
 
 
 def generate_flows(id, duration, net, log_dir, bw , src , dst):
@@ -82,9 +80,10 @@ def generate_flows(id, duration, net, log_dir, bw , src , dst):
     client_cmd += protocol
     client_cmd += " -p "
     client_cmd += port_argument
-    if protocol == "--udp":
-        client_cmd += " -b "
-        client_cmd += bandwidth_argument
+    # if protocol == "--udp":
+
+    client_cmd += " -b "
+    client_cmd += bandwidth_argument
     client_cmd += " -t "
     client_cmd += str(duration)
     client_cmd += " & "
@@ -113,16 +112,26 @@ f1 = open("./json/nycbw.txt" , 'r')
 
 topo = nycT()
 setLogLevel( 'info' )
-c1 = RemoteController(name='c1', ip='192.168.56.1' , port=6653 , protocols="OpenFlow13")
-# sw = UserSwitch
-net = Mininet(topo=topo , controller=c1 , switch=UserSwitch )
+c1 = RemoteController(name='c0', ip='192.168.56.1' , port=6633 )
+sw = UserSwitch
+
+net = Mininet(topo=topo , controller=c1 , switch=sw )
+
+print(net.switches)
+for i in net.switches:
+    print(i.dpid)
 
 net.start()
+
+for i in range(len(topology)):
+    h = net.get('h'+str(i+1))
+    h.cmd('ethtool -K h' + str(i+1) + "-eth0 tx off")
+
 net.pingAll(0.01)
 net.staticArp()
 start = input("Press enter to start")
 
-for x in range(1):
+for x in range(repeat):
     flows = os.listdir("./flows")
     flows = random.sample(flows , len(flows))
     log_dir = "./flowsOut/" + str(x)
@@ -161,5 +170,7 @@ for x in range(1):
                 x.join()
 
         sendDone()
+
+CLI(net)
 
 net.stop()

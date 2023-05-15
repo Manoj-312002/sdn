@@ -120,7 +120,7 @@ public class AppComponent {
         FLOW_STATE_START = 2*nLink;
         // calling packet processor
         requests = new HashMap<>();
-        
+        log.info("graph Init");
         gr = new Graph(nNode, nLink,getDevices(), topologyService, hostService);
     
         gr.updateEdgesToGraph();

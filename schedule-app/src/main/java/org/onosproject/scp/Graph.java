@@ -49,6 +49,8 @@ public class Graph {
     public HashMap<Integer,TopologyEdge> topoEdges;
     // link number to index
     public HashMap<Integer,Integer> state_edge_map;
+    // device id to index
+    public HashMap<String,Integer> dev_id_map;
 
     Random rd;
     public Graph(int V , int E , ArrayList<Device> dev , TopologyService tp, HostService hs){
@@ -63,11 +65,15 @@ public class Graph {
         state_edge_map = new HashMap<>();
         edges = new HashMap<>();
         topoEdges = new HashMap<>();
+        dev_id_map = new HashMap<>();
 
         rd = new Random();
 
         for(int i = 0; i < V; i++ ) adjLists.add( i, new ArrayList<Edge>());
         for(int i = 0; i < AppComponent.STATE_D; i++ ) state.add( i, 0f);
+        
+        int ct = 0;
+        for(Device d : dev ){ dev_id_map.put(d.id().toString(), ct); ct++; }
         topoGraph = topologyService.getGraph(topologyService.currentTopology());
     }
 
@@ -78,10 +84,12 @@ public class Graph {
         // populating topoEdges
 
         for(TopologyEdge te : topoGraph.getEdges()){
-            String src = te.src().deviceId().toString();
-            int sr = Integer.decode("0x" + src.substring(src.length() -1)) -1;
-            String dst = te.dst().deviceId().toString();
-            int ds = Integer.decode("0x" + dst.substring(dst.length() -1)) -1;
+            // String src = te.src().deviceId().toString();
+            // int sr = Integer.decode("0x" + src.substring(src.length() -1)) -1;
+            // String dst = te.dst().deviceId().toString();
+            // int ds = Integer.decode("0x" + dst.substring(dst.length() -1)) -1;
+            int sr = dev_id_map.get(te.src().deviceId().toString());
+            int ds = dev_id_map.get(te.dst().deviceId().toString());
             topoEdges.put(sr*V + ds, te);
         }
         // add edge - state edge map , (Link) state , adjacency list and edges
@@ -171,9 +179,10 @@ public class Graph {
                     pths.limit(5).forEach( (Path p) -> {
                         ArrayList<Integer> ps = new ArrayList<>();
                         for(Link l : p.links()){
-                            String dsts = l.dst().deviceId().toString();
-                            dsts = dsts.substring(dsts.length() - 1);
-                            ps.add(Integer.decode("0x" + dsts ) - 1);
+                            // String dsts = l.dst().deviceId().toString();
+                            // dsts = dsts.substring(dsts.length() - 1);
+                            // ps.add(Integer.decode("0x" + dsts ) - 1);
+                            ps.add(dev_id_map.get(l.dst().deviceId().toString()));
                         }
                         psd.add(ps);
                     });

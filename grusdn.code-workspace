@@ -1,25 +1,36 @@
 {
 	"folders": [
 		{
+			"name": "topo",
 			"path": "topo"
 		},
 		{
+			"name": "metricMeasure",
 			"path": "metricMeasure"
 		},
 		{
-			"path": "gru_local"
-		},
-		{
-			"path": "network_data"
-		},
-		{
+			"name": "baselines",
 			"path": "../baselines"
 		},
 		{
-			"path": "schedule-app"
+			"name": "gru-app",
+			"path": "gru-app"
 		},
 		{
-			"path": "grp-app"
+			"name": "gru_data",
+			"path": "gru_data"
+		},
+		{
+			"name": "gru_local",
+			"path": "gru_local"
+		},
+		{
+			"name": "scp_data",
+			"path": "scp_data"
+		},
+		{
+			"name": "schedule-app",
+			"path": "schedule-app"
 		}
 	],
 	"settings": {
