@@ -1,0 +1,57 @@
+{
+    "os": "Linux-5.4.0-84-generic-x86_64-with-Ubuntu-18.04-bionic",
+    "python": "3.6.9",
+    "heartbeatAt": "2023-05-24T08:25:14.212999",
+    "startedAt": "2023-05-24T08:25:13.226518",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/manoj/sdn/onos-apps/schedule-app/dlmodel/dltrainer.py",
+    "codePath": "schedule-app/dlmodel/dltrainer.py",
+    "git": {
+        "remote": "https://github.com/Manoj-312002/sdn.git",
+        "commit": "2c9da17749ebacad5d5701889dd791d3912bddc5"
+    },
+    "email": null,
+    "root": "/home/manoj/sdn/onos-apps",
+    "host": "manoj-IdeaPad-3-15ITL6",
+    "username": "manoj",
+    "executable": "/usr/bin/python3",
+    "cpu_count": 2,
+    "cpu_count_logical": 4,
+    "cpu_freq": {
+        "current": 776.21425,
+        "min": 400.0,
+        "max": 4100.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 499.521,
+            "min": 400.0,
+            "max": 4100.0
+        },
+        {
+            "current": 813.165,
+            "min": 400.0,
+            "max": 4100.0
+        },
+        {
+            "current": 632.763,
+            "min": 400.0,
+            "max": 4100.0
+        },
+        {
+            "current": 1159.408,
+            "min": 400.0,
+            "max": 4100.0
+        }
+    ],
+    "disk": {
+        "total": 202.35693740844727,
+        "used": 19.589054107666016
+    },
+    "memory": {
+        "total": 7.578620910644531
+    }
+}

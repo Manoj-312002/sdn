@@ -9,10 +9,6 @@
 			"path": "metricMeasure"
 		},
 		{
-			"name": "baselines",
-			"path": "../baselines"
-		},
-		{
 			"name": "gru-app",
 			"path": "gru-app"
 		},

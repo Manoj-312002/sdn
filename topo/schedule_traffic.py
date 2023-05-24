@@ -18,7 +18,7 @@ from threading import Thread
 # np.random.seed(10)
 sampling_interval = '1'  # seconds
 topology = json.load( open('./json/nyc.json', 'r') )
-repeat = 1
+repeat = 50
 random.seed(10)
 
 cnv = ['0']
@@ -60,17 +60,18 @@ def generate_flows(id, duration, net, log_dir, bw , src , dst):
     dst = net.get(str(end_points[1]))
 
     # select connection params
-    protocol = "--udp"
+    protocol = " --udp"
     port_argument = "65525"
     bandwidth_argument = bw
 
     # create cmd
-    server_cmd = "iperf -s "
+    server_cmd = "iperf -s"
     server_cmd += protocol
     server_cmd += " -p "
     server_cmd += port_argument
-    server_cmd += " -i "
-    server_cmd += sampling_interval
+    # server_cmd += " -i "
+    # server_cmd += sampling_interval
+    server_cmd += " -y C"
     server_cmd += " > "
     server_cmd += log_dir + "/flow_%003d" % id + ".txt 2>&1 "
     server_cmd += " & "
@@ -95,26 +96,26 @@ def generate_flows(id, duration, net, log_dir, bw , src , dst):
 
 def sendStart(id_ref ,priority , bw , src , dst, start , duration):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    sock.sendto(bytes("start,{0},{1},{2},{3},{4}".format(id_ref,priority,bw,src,dst), "utf-8"), ("192.168.56.1", 4445))
+    sock.sendto(bytes("start,{0},{1},{2},{3},{4}".format(id_ref,priority,bw,src,dst), "utf-8"), ("localhost", 4445))
     # print(f"Starting {id_ref} at {start} ,{src} to {dst} of {bw} MBPS {duration}s long" , time.strftime("%H:%M:%S", time.localtime()))
 
 def stop(id_ref,duration):
     time.sleep(duration)
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    sock.sendto(bytes("stop,{0}".format(id_ref), "utf-8"), ("192.168.56.1", 4445))
+    sock.sendto(bytes("stop,{0}".format(id_ref), "utf-8"), ("localhost", 4445))
     # print("Stopping" , id_ref , time.strftime("%H:%M:%S", time.localtime())  )
 
 def sendDone():
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    sock.sendto(bytes("done", "utf-8"), ("192.168.56.1", 4445))
+    sock.sendto(bytes("done", "utf-8"), ("localhost", 4445))
 
 f1 = open("./json/nycbw.txt" , 'r')
 
 topo = nycT()
 setLogLevel( 'info' )
-c1 = RemoteController(name='c0', ip='192.168.56.1' , port=6633 )
-sw = UserSwitch
+c1 = RemoteController(name='c0', ip='localhost' , port=6633 )
 
+sw = UserSwitch
 net = Mininet(topo=topo , controller=c1 , switch=sw )
 
 print(net.switches)
@@ -131,15 +132,19 @@ net.pingAll(0.01)
 net.staticArp()
 start = input("Press enter to start")
 
-for x in range(repeat):
+for seq in range(repeat):
     flows = os.listdir("./flows")
-    flows = random.sample(flows , len(flows))
-    log_dir = "./flowsOut/" + str(x)
+    # flows = random.sample(flows , len(flows))
     
     print(flows)
     for i in flows:
         print(i)
         with open("./flows/" + i,'r') as f:
+            log_dir = "./flowsOut/" + str(seq) + "/" + i.split('.')[0] 
+
+            isExist = os.path.exists(log_dir)
+            if not isExist:
+                os.makedirs(log_dir)
 
             context = f.read()
             fls = context.split("\n")[:-1]
@@ -148,29 +153,29 @@ for x in range(repeat):
             for j in fls:
                 fl = [int(x) for x in j.split(",")]
                 fln.append(fl)
-            fln.sort(key=lambda x: x[0])
+            # fln.sort(key=lambda x: x[0])
             
             pr = 0
             id_ref = 0
             thrs = []
-            for i in fln:
-                time.sleep(i[0] - pr)
-                start , priority , bw , duration , src , dst = i
+            for j in fln:
+                time.sleep(j[0] - pr)
+                start , priority , bw , duration , src , dst = j
                 
                 # sendStart(id_ref, priority , bw , src , dst, duration)
                 # generate_flows(id_ref, duration , net, log_dir , str(bw)+ "M" , src, dst )
                 t = Thread(target=sendStart,args=(id_ref, priority , bw , src , dst, start, duration)); t.start(); thrs.append(t)
                 t = Thread(target=generate_flows,args=(id_ref, duration , net, log_dir , str(bw)+ "M" , src, dst )); t.start(); thrs.append(t)
-                t = Thread(target=stop,args=(id_ref,duration)); t.start(); thrs.append(t)
+                t = Thread(target=stop,args=(id_ref,duration+1)); t.start(); thrs.append(t)
 
                 pr = start
                 id_ref += 1
             
             for x in thrs:
                 x.join()
-
+            time.sleep(2)
         sendDone()
-
+    time.sleep(5)
 CLI(net)
 
 net.stop()

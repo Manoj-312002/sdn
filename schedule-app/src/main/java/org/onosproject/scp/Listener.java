@@ -1,6 +1,7 @@
 package org.onosproject.scp;
 
 import java.net.*;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 
 import org.slf4j.Logger;
@@ -21,6 +22,7 @@ public class Listener extends Thread {
 
     public void run() {
         try{
+            AppComponent.customLogger.splitting("Start " + LocalDateTime.now());
             while (true) {
                 DatagramPacket packet  = new DatagramPacket(buf, buf.length);
                 socket.receive(packet);
@@ -66,6 +68,7 @@ public class Listener extends Thread {
                 }else{
                     // finish episode
                     // TODO run in separate thread
+                    AppComponent.customLogger.splitting("Done " + LocalDateTime.now());
                     AppComponent.rl.finishEpisode();
                 }
                 log.info(data);

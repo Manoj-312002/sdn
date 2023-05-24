@@ -1,0 +1,62 @@
+wandb_version: 1
+
+num_classes:
+  desc: null
+  value: 1
+wandb:
+  desc: null
+  value: sdn
+epochs:
+  desc: null
+  value: 25
+lr:
+  desc: null
+  value: 0.0001
+mdl:
+  desc: null
+  value: scp
+drp:
+  desc: null
+  value: 0.5
+stateD:
+  desc: null
+  value: 86
+lyrs:
+  desc: null
+  value:
+  - 40
+  - 20
+  - 1
+name:
+  desc: null
+  value: scp
+sleep:
+  desc: null
+  value: 300
+_wandb:
+  desc: null
+  value:
+    code_path: code/schedule-app/dlmodel/dltrainer.py
+    python_version: 3.6.9
+    cli_version: 0.15.3
+    framework: lightning
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1684916713.248701
+    t:
+      1:
+      - 1
+      - 9
+      - 55
+      2:
+      - 1
+      - 9
+      - 55
+      3:
+      - 13
+      - 16
+      - 23
+      4: 3.6.9
+      5: 0.15.3
+      8:
+      - 5

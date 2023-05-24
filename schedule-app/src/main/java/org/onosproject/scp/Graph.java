@@ -215,7 +215,7 @@ public class Graph {
         ArrayList<ArrayList<Integer>> pths = allPaths.get(rq.srci*V + rq.dsti);
 
         // implemening epsilon greedy
-        if( rd.nextFloat() < 0.8 ){
+        if( rd.nextFloat() < 0.9 ){
             AppComponent.customLogger.splitting("Maximise " + Integer.toString(reqId) + " " + pths.get(i1).toString());
             AppComponent.customLogger.splitting("Maximise " + Integer.toString(reqId) + " " + pths.get(i2).toString());
 
@@ -247,7 +247,7 @@ public class Graph {
         for(Integer lkId : edges.keySet()){
             state.set( state_edge_map.get(lkId) , edges.get(lkId).floatValue() );
         }
-        AppComponent.customLogger.splitting(state.toString());
+        // AppComponent.customLogger.splitting(state.toString());
         for(Integer reqId : AppComponent.requests.keySet()){
             int src = AppComponent.requests.get(reqId).srci;
             for(Requests.path pt : AppComponent.requests.get(reqId).paths){
@@ -259,6 +259,6 @@ public class Graph {
                 }
             }
         }
-        AppComponent.customLogger.splitting(state.toString());
+        // AppComponent.customLogger.splitting(state.toString());
     }
 }

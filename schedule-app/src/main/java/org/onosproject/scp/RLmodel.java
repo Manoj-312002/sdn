@@ -116,6 +116,6 @@ public class RLmodel {
     // a new episode with request id should also be created
     public void addSequence(){
         rplBuffersquareR.add(calculateReward());   
-        rplBuffersquareS.add(AppComponent.gr.state);
+        rplBuffersquareS.add( (ArrayList<Float>)AppComponent.gr.state.clone() );
     }
 }

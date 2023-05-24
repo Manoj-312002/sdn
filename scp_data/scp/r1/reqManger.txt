@@ -1,0 +1,2898 @@
+Add 0 50 13 0 4
+Add 1 13 21 2 9
+Add 2 16 11 8 5
+Add 3 29 17 10 1
+Add 4 20 29 3 12
+Add 5 6 14 13 7
+Add 6 24 29 6 11
+Remove 2
+Remove 0
+Remove 4
+Remove 1
+Remove 3
+Remove 6
+Remove 5
+Add 0 42 28 4 9
+Add 1 21 29 12 10
+Add 2 47 18 1 3
+Add 3 6 14 8 6
+Add 4 22 30 0 5
+Add 5 28 26 13 11
+Add 6 30 25 7 2
+Remove 1
+Remove 3
+Remove 4
+Remove 0
+Remove 6
+Remove 2
+Remove 5
+Add 0 42 15 5 6
+Add 1 45 17 3 8
+Add 2 13 17 9 4
+Add 3 26 27 1 10
+Add 4 6 29 12 7
+Add 5 46 14 0 11
+Add 6 43 11 13 2
+Remove 0
+Remove 4
+Remove 3
+Remove 5
+Remove 6
+Remove 2
+Remove 1
+Add 0 10 24 5 6
+Add 1 3 15 1 10
+Add 2 28 20 8 13
+Add 3 29 28 0 9
+Add 4 13 13 4 7
+Add 5 28 21 3 12
+Add 6 29 24 11 2
+Remove 1
+Remove 0
+Remove 3
+Remove 6
+Remove 2
+Remove 4
+Remove 5
+Add 0 11 22 4 3
+Add 1 3 15 11 12
+Add 2 49 16 13 2
+Add 3 39 23 0 9
+Add 4 8 17 5 8
+Add 5 42 22 10 6
+Add 6 46 23 1 7
+Remove 3
+Remove 1
+Remove 4
+Remove 0
+Remove 5
+Remove 6
+Remove 2
+Add 0 44 19 10 13
+Add 1 41 30 8 2
+Add 2 24 29 0 12
+Add 3 23 15 1 4
+Add 4 47 23 9 7
+Add 5 14 18 5 11
+Remove 1
+Add 6 13 23 6 3
+Remove 3
+Remove 2
+Remove 0
+Remove 6
+Remove 5
+Remove 4
+Add 0 7 12 13 10
+Add 1 18 20 5 4
+Add 2 33 13 11 6
+Add 3 16 22 3 1
+Add 4 24 14 2 12
+Add 5 41 14 7 9
+Add 6 34 12 8 0
+Remove 0
+Remove 1
+Remove 5
+Remove 6
+Remove 2
+Remove 3
+Remove 4
+Add 0 43 28 13 10
+Add 1 37 28 5 7
+Add 2 37 12 4 0
+Add 3 7 27 1 12
+Add 4 37 16 3 6
+Remove 0
+Add 5 2 22 2 8
+Add 6 12 17 11 9
+Remove 3
+Remove 1
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 11 25 11 3
+Add 1 29 22 1 4
+Add 2 21 17 8 13
+Add 3 32 17 7 10
+Add 4 9 23 6 0
+Add 5 15 10 2 9
+Add 6 31 29 12 5
+Remove 2
+Remove 1
+Remove 5
+Remove 0
+Remove 3
+Remove 4
+Remove 6
+Add 0 43 15 6 11
+Add 1 26 11 3 13
+Add 2 37 22 12 8
+Add 3 7 26 10 4
+Add 4 23 12 1 2
+Add 5 22 15 0 7
+Remove 1
+Add 6 36 26 9 5
+Remove 2
+Remove 0
+Remove 5
+Remove 4
+Remove 6
+Remove 3
+Add 0 8 10 10 7
+Add 1 43 23 3 1
+Add 2 45 22 4 8
+Add 3 8 22 2 0
+Add 4 22 15 11 12
+Remove 0
+Add 5 49 10 5 13
+Add 6 27 11 9 6
+Remove 1
+Remove 3
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 3 25 0 5
+Add 1 42 20 13 9
+Add 2 4 24 8 7
+Add 3 22 26 6 2
+Add 4 31 18 1 3
+Add 5 39 14 4 11
+Add 6 34 21 10 12
+Remove 2
+Remove 4
+Remove 1
+Remove 0
+Remove 3
+Remove 5
+Remove 6
+Add 0 5 21 8 11
+Add 1 33 29 7 4
+Add 2 47 14 13 9
+Add 3 35 27 1 12
+Add 4 13 12 2 3
+Add 5 15 25 10 5
+Add 6 20 15 0 6
+Remove 5
+Remove 4
+Remove 0
+Remove 6
+Remove 3
+Remove 2
+Remove 1
+Add 0 37 18 2 12
+Add 1 50 13 7 11
+Add 2 6 26 6 10
+Add 3 46 29 5 1
+Add 4 10 11 13 8
+Add 5 1 16 3 9
+Add 6 4 30 0 4
+Remove 1
+Remove 0
+Remove 4
+Remove 2
+Remove 3
+Remove 5
+Remove 6
+Add 0 7 25 4 13
+Add 1 49 15 6 10
+Add 2 1 28 9 7
+Add 3 39 19 0 2
+Add 4 5 15 1 11
+Add 5 47 23 12 3
+Add 6 49 20 5 8
+Remove 1
+Remove 0
+Remove 4
+Remove 2
+Remove 3
+Remove 6
+Remove 5
+Add 0 16 21 9 0
+Add 1 30 17 11 2
+Add 2 9 16 5 4
+Add 3 27 19 13 12
+Add 4 9 29 6 7
+Add 5 12 19 3 10
+Remove 0
+Add 6 25 11 1 8
+Remove 2
+Remove 1
+Remove 6
+Remove 3
+Remove 4
+Remove 5
+Add 0 4 25 2 1
+Add 1 8 23 7 11
+Add 2 22 19 12 8
+Add 3 33 28 0 10
+Add 4 25 30 13 9
+Add 5 22 10 6 3
+Add 6 46 19 5 4
+Remove 3
+Remove 2
+Remove 0
+Remove 4
+Remove 1
+Remove 5
+Remove 6
+Add 0 2 14 1 13
+Add 1 27 19 0 8
+Add 2 2 15 10 5
+Add 3 3 26 7 2
+Add 4 41 21 11 6
+Add 5 50 21 4 3
+Add 6 37 11 9 12
+Remove 1
+Remove 5
+Remove 0
+Remove 3
+Remove 6
+Remove 2
+Remove 4
+Add 0 26 10 7 2
+Add 1 48 27 11 8
+Add 2 8 23 1 13
+Add 3 20 27 9 0
+Add 4 41 28 12 6
+Add 5 11 17 4 5
+Add 6 37 24 10 3
+Remove 3
+Remove 0
+Remove 1
+Remove 6
+Remove 2
+Remove 4
+Remove 5
+Add 0 45 27 4 7
+Add 1 23 18 1 11
+Add 2 11 29 2 5
+Add 3 28 16 3 6
+Add 4 45 19 9 12
+Add 5 31 28 8 0
+Add 6 17 22 10 13
+Remove 0
+Remove 3
+Remove 1
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 11 25 11 3
+Add 1 29 22 1 4
+Add 2 21 17 8 13
+Add 3 32 17 7 10
+Add 4 9 23 6 0
+Add 5 15 10 2 9
+Add 6 31 29 12 5
+Remove 2
+Remove 1
+Remove 5
+Remove 0
+Remove 3
+Remove 4
+Remove 6
+Add 0 4 25 2 1
+Add 1 8 23 7 11
+Add 2 22 19 12 8
+Add 3 33 28 0 10
+Add 4 25 30 13 9
+Add 5 22 10 6 3
+Add 6 46 19 5 4
+Remove 3
+Remove 2
+Remove 0
+Remove 4
+Remove 1
+Remove 5
+Remove 6
+Add 0 45 27 4 7
+Add 1 23 18 1 11
+Add 2 11 29 2 5
+Add 3 28 16 3 6
+Add 4 45 19 9 12
+Add 5 31 28 8 0
+Add 6 17 22 10 13
+Remove 0
+Remove 3
+Remove 1
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 8 10 10 7
+Add 1 43 23 3 1
+Add 2 45 22 4 8
+Add 3 8 22 2 0
+Add 4 22 15 11 12
+Remove 0
+Add 5 49 10 5 13
+Add 6 27 11 9 6
+Remove 1
+Remove 3
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 11 22 4 3
+Add 1 3 15 11 12
+Add 2 49 16 13 2
+Add 3 39 23 0 9
+Add 4 8 17 5 8
+Add 5 42 22 10 6
+Add 6 46 23 1 7
+Remove 3
+Remove 1
+Remove 4
+Remove 0
+Remove 5
+Remove 6
+Remove 2
+Add 0 10 24 5 6
+Add 1 3 15 1 10
+Add 2 28 20 8 13
+Add 3 29 28 0 9
+Add 4 13 13 4 7
+Add 5 28 21 3 12
+Add 6 29 24 11 2
+Remove 1
+Remove 0
+Remove 3
+Remove 6
+Remove 2
+Remove 4
+Remove 5
+Add 0 5 21 8 11
+Add 1 33 29 7 4
+Add 2 47 14 13 9
+Add 3 35 27 1 12
+Add 4 13 12 2 3
+Add 5 15 25 10 5
+Add 6 20 15 0 6
+Remove 5
+Remove 4
+Remove 0
+Remove 6
+Remove 3
+Remove 2
+Remove 1
+Add 0 44 19 10 13
+Add 1 41 30 8 2
+Add 2 24 29 0 12
+Add 3 23 15 1 4
+Add 4 47 23 9 7
+Add 5 14 18 5 11
+Remove 1
+Add 6 13 23 6 3
+Remove 3
+Remove 2
+Remove 0
+Remove 6
+Remove 5
+Remove 4
+Add 0 42 15 5 6
+Add 1 45 17 3 8
+Add 2 13 17 9 4
+Add 3 26 27 1 10
+Add 4 6 29 12 7
+Add 5 46 14 0 11
+Add 6 43 11 13 2
+Remove 0
+Remove 4
+Remove 3
+Remove 5
+Remove 6
+Remove 2
+Remove 1
+Add 0 3 25 0 5
+Add 1 42 20 13 9
+Add 2 4 24 8 7
+Add 3 22 26 6 2
+Add 4 31 18 1 3
+Add 5 39 14 4 11
+Add 6 34 21 10 12
+Remove 2
+Remove 4
+Remove 1
+Remove 0
+Remove 3
+Remove 5
+Remove 6
+Add 0 2 14 1 13
+Add 1 27 19 0 8
+Add 2 2 15 10 5
+Add 3 3 26 7 2
+Add 4 41 21 11 6
+Add 5 50 21 4 3
+Add 6 37 11 9 12
+Remove 1
+Remove 5
+Remove 0
+Remove 3
+Remove 6
+Remove 2
+Remove 4
+Add 0 7 12 13 10
+Add 1 18 20 5 4
+Add 2 33 13 11 6
+Add 3 16 22 3 1
+Add 4 24 14 2 12
+Add 5 41 14 7 9
+Add 6 34 12 8 0
+Remove 0
+Remove 1
+Remove 5
+Remove 6
+Remove 2
+Remove 3
+Remove 4
+Add 0 50 13 0 4
+Add 1 13 21 2 9
+Add 2 16 11 8 5
+Add 3 29 17 10 1
+Add 4 20 29 3 12
+Add 5 6 14 13 7
+Add 6 24 29 6 11
+Remove 2
+Remove 0
+Remove 4
+Remove 1
+Remove 3
+Remove 6
+Remove 5
+Add 0 43 28 13 10
+Add 1 37 28 5 7
+Add 2 37 12 4 0
+Add 3 7 27 1 12
+Add 4 37 16 3 6
+Remove 0
+Add 5 2 22 2 8
+Add 6 12 17 11 9
+Remove 3
+Remove 1
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 7 25 4 13
+Add 1 49 15 6 10
+Add 2 1 28 9 7
+Add 3 39 19 0 2
+Add 4 5 15 1 11
+Add 5 47 23 12 3
+Add 6 49 20 5 8
+Remove 1
+Remove 0
+Remove 4
+Remove 2
+Remove 3
+Remove 6
+Remove 5
+Add 0 26 10 7 2
+Add 1 48 27 11 8
+Add 2 8 23 1 13
+Add 3 20 27 9 0
+Add 4 41 28 12 6
+Add 5 11 17 4 5
+Add 6 37 24 10 3
+Remove 3
+Remove 0
+Remove 1
+Remove 6
+Remove 2
+Remove 4
+Remove 5
+Add 0 37 18 2 12
+Add 1 50 13 7 11
+Add 2 6 26 6 10
+Add 3 46 29 5 1
+Add 4 10 11 13 8
+Add 5 1 16 3 9
+Add 6 4 30 0 4
+Remove 1
+Remove 0
+Remove 2
+Remove 4
+Remove 3
+Remove 5
+Remove 6
+Add 0 43 15 6 11
+Add 1 26 11 3 13
+Add 2 37 22 12 8
+Add 3 7 26 10 4
+Add 4 23 12 1 2
+Add 5 22 15 0 7
+Remove 1
+Add 6 36 26 9 5
+Remove 2
+Remove 0
+Remove 5
+Remove 4
+Remove 6
+Remove 3
+Add 0 16 21 9 0
+Add 1 30 17 11 2
+Add 2 9 16 5 4
+Add 3 27 19 13 12
+Add 4 9 29 6 7
+Add 5 12 19 3 10
+Remove 0
+Add 6 25 11 1 8
+Remove 2
+Remove 1
+Remove 6
+Remove 3
+Remove 4
+Remove 5
+Add 0 42 28 4 9
+Add 1 21 29 12 10
+Add 2 47 18 1 3
+Add 3 6 14 8 6
+Add 4 22 30 0 5
+Add 5 28 26 13 11
+Add 6 30 25 7 2
+Remove 1
+Remove 3
+Remove 4
+Remove 0
+Remove 6
+Remove 2
+Remove 5
+Add 0 11 25 11 3
+Add 1 29 22 1 4
+Add 2 21 17 8 13
+Add 3 32 17 7 10
+Add 4 9 23 6 0
+Add 5 15 10 2 9
+Add 6 31 29 12 5
+Remove 2
+Remove 1
+Remove 5
+Remove 0
+Remove 3
+Remove 4
+Remove 6
+Add 0 43 28 13 10
+Add 1 37 28 5 7
+Add 2 37 12 4 0
+Add 3 7 27 1 12
+Add 4 37 16 3 6
+Remove 0
+Add 5 2 22 2 8
+Add 6 12 17 11 9
+Remove 3
+Remove 1
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 42 28 4 9
+Add 1 21 29 12 10
+Add 2 47 18 1 3
+Add 3 6 14 8 6
+Add 4 22 30 0 5
+Add 5 28 26 13 11
+Add 6 30 25 7 2
+Remove 1
+Remove 3
+Remove 4
+Remove 0
+Remove 6
+Remove 2
+Remove 5
+Add 0 10 24 5 6
+Add 1 3 15 1 10
+Add 2 28 20 8 13
+Add 3 29 28 0 9
+Add 4 13 13 4 7
+Add 5 28 21 3 12
+Add 6 29 24 11 2
+Remove 1
+Remove 0
+Remove 3
+Remove 6
+Remove 2
+Remove 4
+Remove 5
+Add 0 37 18 2 12
+Add 1 50 13 7 11
+Add 2 6 26 6 10
+Add 3 46 29 5 1
+Add 4 10 11 13 8
+Add 5 1 16 3 9
+Add 6 4 30 0 4
+Remove 1
+Remove 0
+Remove 2
+Remove 4
+Remove 3
+Remove 5
+Remove 6
+Add 0 16 21 9 0
+Add 1 30 17 11 2
+Add 2 9 16 5 4
+Add 3 27 19 13 12
+Add 4 9 29 6 7
+Add 5 12 19 3 10
+Remove 0
+Add 6 25 11 1 8
+Remove 2
+Remove 1
+Remove 6
+Remove 3
+Remove 4
+Remove 5
+Add 0 7 25 4 13
+Add 1 49 15 6 10
+Add 2 1 28 9 7
+Add 3 39 19 0 2
+Add 4 5 15 1 11
+Add 5 47 23 12 3
+Add 6 49 20 5 8
+Remove 1
+Remove 0
+Remove 4
+Remove 2
+Remove 3
+Remove 6
+Remove 5
+Add 0 5 21 8 11
+Add 1 33 29 7 4
+Add 2 47 14 13 9
+Add 3 35 27 1 12
+Add 4 13 12 2 3
+Add 5 15 25 10 5
+Add 6 20 15 0 6
+Remove 5
+Remove 4
+Remove 0
+Remove 6
+Remove 3
+Remove 2
+Remove 1
+Add 0 2 14 1 13
+Add 1 27 19 0 8
+Add 2 2 15 10 5
+Add 3 3 26 7 2
+Add 4 41 21 11 6
+Add 5 50 21 4 3
+Add 6 37 11 9 12
+Remove 1
+Remove 5
+Remove 0
+Remove 3
+Remove 6
+Remove 2
+Remove 4
+Add 0 45 27 4 7
+Add 1 23 18 1 11
+Add 2 11 29 2 5
+Add 3 28 16 3 6
+Add 4 45 19 9 12
+Add 5 31 28 8 0
+Add 6 17 22 10 13
+Remove 0
+Remove 3
+Remove 1
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 26 10 7 2
+Add 1 48 27 11 8
+Add 2 8 23 1 13
+Add 3 20 27 9 0
+Add 4 41 28 12 6
+Add 5 11 17 4 5
+Add 6 37 24 10 3
+Remove 3
+Remove 0
+Remove 1
+Remove 6
+Remove 2
+Remove 4
+Remove 5
+Add 0 7 12 13 10
+Add 1 18 20 5 4
+Add 2 33 13 11 6
+Add 3 16 22 3 1
+Add 4 24 14 2 12
+Add 5 41 14 7 9
+Add 6 34 12 8 0
+Remove 0
+Remove 1
+Remove 5
+Remove 6
+Remove 2
+Remove 3
+Remove 4
+Add 0 44 19 10 13
+Add 1 41 30 8 2
+Add 2 24 29 0 12
+Add 3 23 15 1 4
+Add 4 47 23 9 7
+Add 5 14 18 5 11
+Remove 1
+Add 6 13 23 6 3
+Remove 3
+Remove 2
+Remove 0
+Remove 6
+Remove 5
+Remove 4
+Add 0 43 15 6 11
+Add 1 26 11 3 13
+Add 2 37 22 12 8
+Add 3 7 26 10 4
+Add 4 23 12 1 2
+Add 5 22 15 0 7
+Remove 1
+Add 6 36 26 9 5
+Remove 2
+Remove 0
+Remove 5
+Remove 4
+Remove 6
+Remove 3
+Add 0 50 13 0 4
+Add 1 13 21 2 9
+Add 2 16 11 8 5
+Add 3 29 17 10 1
+Add 4 20 29 3 12
+Add 5 6 14 13 7
+Add 6 24 29 6 11
+Remove 2
+Remove 0
+Remove 4
+Remove 1
+Remove 3
+Remove 6
+Remove 5
+Add 0 11 22 4 3
+Add 1 3 15 11 12
+Add 2 49 16 13 2
+Add 3 39 23 0 9
+Add 4 8 17 5 8
+Add 5 42 22 10 6
+Add 6 46 23 1 7
+Remove 3
+Remove 1
+Remove 4
+Remove 0
+Remove 5
+Remove 6
+Remove 2
+Add 0 8 10 10 7
+Add 1 43 23 3 1
+Add 2 45 22 4 8
+Add 3 8 22 2 0
+Add 4 22 15 11 12
+Remove 0
+Add 5 49 10 5 13
+Add 6 27 11 9 6
+Remove 1
+Remove 3
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 3 25 0 5
+Add 1 42 20 13 9
+Add 2 4 24 8 7
+Add 3 22 26 6 2
+Add 4 31 18 1 3
+Add 5 39 14 4 11
+Add 6 34 21 10 12
+Remove 2
+Remove 4
+Remove 1
+Remove 0
+Remove 3
+Remove 5
+Remove 6
+Add 0 4 25 2 1
+Add 1 8 23 7 11
+Add 2 22 19 12 8
+Add 3 33 28 0 10
+Add 4 25 30 13 9
+Add 5 22 10 6 3
+Add 6 46 19 5 4
+Remove 3
+Remove 2
+Remove 0
+Remove 4
+Remove 1
+Remove 5
+Remove 6
+Add 0 42 15 5 6
+Add 1 45 17 3 8
+Add 2 13 17 9 4
+Add 3 26 27 1 10
+Add 4 6 29 12 7
+Add 5 46 14 0 11
+Add 6 43 11 13 2
+Remove 0
+Remove 4
+Remove 3
+Remove 5
+Remove 6
+Remove 2
+Remove 1
+Add 0 4 25 2 1
+Add 1 8 23 7 11
+Add 2 22 19 12 8
+Add 3 33 28 0 10
+Add 4 25 30 13 9
+Add 5 22 10 6 3
+Add 6 46 19 5 4
+Remove 3
+Remove 2
+Remove 0
+Remove 4
+Remove 1
+Remove 5
+Remove 6
+Add 0 10 24 5 6
+Add 1 3 15 1 10
+Add 2 28 20 8 13
+Add 3 29 28 0 9
+Add 4 13 13 4 7
+Add 5 28 21 3 12
+Add 6 29 24 11 2
+Remove 1
+Remove 0
+Remove 3
+Remove 6
+Remove 2
+Remove 4
+Remove 5
+Add 0 7 25 4 13
+Add 1 49 15 6 10
+Add 2 1 28 9 7
+Add 3 39 19 0 2
+Add 4 5 15 1 11
+Add 5 47 23 12 3
+Add 6 49 20 5 8
+Remove 1
+Remove 0
+Remove 4
+Remove 2
+Remove 3
+Remove 6
+Remove 5
+Add 0 2 14 1 13
+Add 1 27 19 0 8
+Add 2 2 15 10 5
+Add 3 3 26 7 2
+Add 4 41 21 11 6
+Add 5 50 21 4 3
+Add 6 37 11 9 12
+Remove 1
+Remove 5
+Remove 0
+Remove 3
+Remove 6
+Remove 2
+Remove 4
+Add 0 5 21 8 11
+Add 1 33 29 7 4
+Add 2 47 14 13 9
+Add 3 35 27 1 12
+Add 4 13 12 2 3
+Add 5 15 25 10 5
+Add 6 20 15 0 6
+Remove 5
+Remove 4
+Remove 0
+Remove 6
+Remove 3
+Remove 2
+Remove 1
+Add 0 43 28 13 10
+Add 1 37 28 5 7
+Add 2 37 12 4 0
+Add 3 7 27 1 12
+Add 4 37 16 3 6
+Remove 0
+Add 5 2 22 2 8
+Add 6 12 17 11 9
+Remove 3
+Remove 1
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 7 12 13 10
+Add 1 18 20 5 4
+Add 2 33 13 11 6
+Add 3 16 22 3 1
+Add 4 24 14 2 12
+Add 5 41 14 7 9
+Add 6 34 12 8 0
+Remove 0
+Remove 1
+Remove 5
+Remove 6
+Remove 2
+Remove 3
+Remove 4
+Add 0 11 22 4 3
+Add 1 3 15 11 12
+Add 2 49 16 13 2
+Add 3 39 23 0 9
+Add 4 8 17 5 8
+Add 5 42 22 10 6
+Add 6 46 23 1 7
+Remove 3
+Remove 1
+Remove 4
+Remove 0
+Remove 5
+Remove 6
+Remove 2
+Add 0 42 15 5 6
+Add 1 45 17 3 8
+Add 2 13 17 9 4
+Add 3 26 27 1 10
+Add 4 6 29 12 7
+Add 5 46 14 0 11
+Add 6 43 11 13 2
+Remove 0
+Remove 4
+Remove 3
+Remove 5
+Remove 6
+Remove 2
+Remove 1
+Add 0 42 28 4 9
+Add 1 21 29 12 10
+Add 2 47 18 1 3
+Add 3 6 14 8 6
+Add 4 22 30 0 5
+Add 5 28 26 13 11
+Add 6 30 25 7 2
+Remove 1
+Remove 3
+Remove 4
+Remove 0
+Remove 6
+Remove 2
+Remove 5
+Add 0 43 15 6 11
+Add 1 26 11 3 13
+Add 2 37 22 12 8
+Add 3 7 26 10 4
+Add 4 23 12 1 2
+Add 5 22 15 0 7
+Remove 1
+Add 6 36 26 9 5
+Remove 2
+Remove 0
+Remove 5
+Remove 4
+Remove 6
+Remove 3
+Add 0 44 19 10 13
+Add 1 41 30 8 2
+Add 2 24 29 0 12
+Add 3 23 15 1 4
+Add 4 47 23 9 7
+Add 5 14 18 5 11
+Remove 1
+Add 6 13 23 6 3
+Remove 3
+Remove 2
+Remove 0
+Remove 6
+Remove 5
+Remove 4
+Add 0 16 21 9 0
+Add 1 30 17 11 2
+Add 2 9 16 5 4
+Add 3 27 19 13 12
+Add 4 9 29 6 7
+Add 5 12 19 3 10
+Remove 0
+Add 6 25 11 1 8
+Remove 2
+Remove 1
+Remove 6
+Remove 3
+Remove 4
+Remove 5
+Add 0 26 10 7 2
+Add 1 48 27 11 8
+Add 2 8 23 1 13
+Add 3 20 27 9 0
+Add 4 41 28 12 6
+Add 5 11 17 4 5
+Add 6 37 24 10 3
+Remove 3
+Remove 0
+Remove 1
+Remove 6
+Remove 2
+Remove 4
+Remove 5
+Add 0 45 27 4 7
+Add 1 23 18 1 11
+Add 2 11 29 2 5
+Add 3 28 16 3 6
+Add 4 45 19 9 12
+Add 5 31 28 8 0
+Add 6 17 22 10 13
+Remove 0
+Remove 3
+Remove 1
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 37 18 2 12
+Add 1 50 13 7 11
+Add 2 6 26 6 10
+Add 3 46 29 5 1
+Add 4 10 11 13 8
+Add 5 1 16 3 9
+Add 6 4 30 0 4
+Remove 1
+Remove 0
+Remove 2
+Remove 4
+Remove 3
+Remove 5
+Remove 6
+Add 0 8 10 10 7
+Add 1 43 23 3 1
+Add 2 45 22 4 8
+Add 3 8 22 2 0
+Add 4 22 15 11 12
+Remove 0
+Add 5 49 10 5 13
+Add 6 27 11 9 6
+Remove 1
+Remove 3
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 50 13 0 4
+Add 1 13 21 2 9
+Add 2 16 11 8 5
+Add 3 29 17 10 1
+Add 4 20 29 3 12
+Add 5 6 14 13 7
+Add 6 24 29 6 11
+Remove 2
+Remove 0
+Remove 4
+Remove 1
+Remove 3
+Remove 6
+Remove 5
+Add 0 11 25 11 3
+Add 1 29 22 1 4
+Add 2 21 17 8 13
+Add 3 32 17 7 10
+Add 4 9 23 6 0
+Add 5 15 10 2 9
+Add 6 31 29 12 5
+Remove 2
+Remove 1
+Remove 5
+Remove 0
+Remove 3
+Remove 4
+Remove 6
+Add 0 3 25 0 5
+Add 1 42 20 13 9
+Add 2 4 24 8 7
+Add 3 22 26 6 2
+Add 4 31 18 1 3
+Add 5 39 14 4 11
+Add 6 34 21 10 12
+Remove 2
+Remove 4
+Remove 1
+Remove 0
+Remove 3
+Remove 5
+Remove 6
+Add 0 2 14 1 13
+Add 1 27 19 0 8
+Add 2 2 15 10 5
+Add 3 3 26 7 2
+Add 4 41 21 11 6
+Add 5 50 21 4 3
+Add 6 37 11 9 12
+Remove 1
+Remove 5
+Remove 0
+Remove 3
+Remove 6
+Remove 2
+Remove 4
+Add 0 8 10 10 7
+Add 1 43 23 3 1
+Add 2 45 22 4 8
+Add 3 8 22 2 0
+Add 4 22 15 11 12
+Remove 0
+Add 5 49 10 5 13
+Add 6 27 11 9 6
+Remove 1
+Remove 3
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 42 28 4 9
+Add 1 21 29 12 10
+Add 2 47 18 1 3
+Add 3 6 14 8 6
+Add 4 22 30 0 5
+Add 5 28 26 13 11
+Add 6 30 25 7 2
+Remove 1
+Remove 3
+Remove 4
+Remove 0
+Remove 6
+Remove 2
+Remove 5
+Add 0 11 25 11 3
+Add 1 29 22 1 4
+Add 2 21 17 8 13
+Add 3 32 17 7 10
+Add 4 9 23 6 0
+Add 5 15 10 2 9
+Add 6 31 29 12 5
+Remove 2
+Remove 1
+Remove 5
+Remove 0
+Remove 3
+Remove 4
+Remove 6
+Add 0 44 19 10 13
+Add 1 41 30 8 2
+Add 2 24 29 0 12
+Add 3 23 15 1 4
+Add 4 47 23 9 7
+Add 5 14 18 5 11
+Remove 1
+Add 6 13 23 6 3
+Remove 3
+Remove 2
+Remove 0
+Remove 6
+Remove 5
+Remove 4
+Add 0 43 28 13 10
+Add 1 37 28 5 7
+Add 2 37 12 4 0
+Add 3 7 27 1 12
+Add 4 37 16 3 6
+Remove 0
+Add 5 2 22 2 8
+Add 6 12 17 11 9
+Remove 3
+Remove 1
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 16 21 9 0
+Add 1 30 17 11 2
+Add 2 9 16 5 4
+Add 3 27 19 13 12
+Add 4 9 29 6 7
+Add 5 12 19 3 10
+Remove 0
+Add 6 25 11 1 8
+Remove 2
+Remove 1
+Remove 6
+Remove 3
+Remove 4
+Remove 5
+Add 0 50 13 0 4
+Add 1 13 21 2 9
+Add 2 16 11 8 5
+Add 3 29 17 10 1
+Add 4 20 29 3 12
+Add 5 6 14 13 7
+Add 6 24 29 6 11
+Remove 2
+Remove 0
+Remove 4
+Remove 1
+Remove 3
+Remove 6
+Remove 5
+Add 0 7 25 4 13
+Add 1 49 15 6 10
+Add 2 1 28 9 7
+Add 3 39 19 0 2
+Add 4 5 15 1 11
+Add 5 47 23 12 3
+Add 6 49 20 5 8
+Remove 1
+Remove 0
+Remove 4
+Remove 2
+Remove 3
+Remove 6
+Remove 5
+Add 0 37 18 2 12
+Add 1 50 13 7 11
+Add 2 6 26 6 10
+Add 3 46 29 5 1
+Add 4 10 11 13 8
+Add 5 1 16 3 9
+Add 6 4 30 0 4
+Remove 1
+Remove 0
+Remove 2
+Remove 4
+Remove 3
+Remove 5
+Remove 6
+Add 0 26 10 7 2
+Add 1 48 27 11 8
+Add 2 8 23 1 13
+Add 3 20 27 9 0
+Add 4 41 28 12 6
+Add 5 11 17 4 5
+Add 6 37 24 10 3
+Remove 3
+Remove 0
+Remove 1
+Remove 6
+Remove 2
+Remove 4
+Remove 5
+Add 0 5 21 8 11
+Add 1 33 29 7 4
+Add 2 47 14 13 9
+Add 3 35 27 1 12
+Add 4 13 12 2 3
+Add 5 15 25 10 5
+Add 6 20 15 0 6
+Remove 5
+Remove 4
+Remove 0
+Remove 6
+Remove 3
+Remove 2
+Remove 1
+Add 0 4 25 2 1
+Add 1 8 23 7 11
+Add 2 22 19 12 8
+Add 3 33 28 0 10
+Add 4 25 30 13 9
+Add 5 22 10 6 3
+Add 6 46 19 5 4
+Remove 3
+Remove 2
+Remove 0
+Remove 4
+Remove 1
+Remove 5
+Remove 6
+Add 0 3 25 0 5
+Add 1 42 20 13 9
+Add 2 4 24 8 7
+Add 3 22 26 6 2
+Add 4 31 18 1 3
+Add 5 39 14 4 11
+Add 6 34 21 10 12
+Remove 2
+Remove 4
+Remove 1
+Remove 0
+Remove 3
+Remove 5
+Remove 6
+Add 0 43 15 6 11
+Add 1 26 11 3 13
+Add 2 37 22 12 8
+Add 3 7 26 10 4
+Add 4 23 12 1 2
+Add 5 22 15 0 7
+Remove 1
+Add 6 36 26 9 5
+Remove 2
+Remove 0
+Remove 5
+Remove 4
+Remove 6
+Remove 3
+Add 0 45 27 4 7
+Add 1 23 18 1 11
+Add 2 11 29 2 5
+Add 3 28 16 3 6
+Add 4 45 19 9 12
+Add 5 31 28 8 0
+Add 6 17 22 10 13
+Remove 0
+Remove 3
+Remove 1
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 7 12 13 10
+Add 1 18 20 5 4
+Add 2 33 13 11 6
+Add 3 16 22 3 1
+Add 4 24 14 2 12
+Add 5 41 14 7 9
+Add 6 34 12 8 0
+Remove 0
+Remove 1
+Remove 5
+Remove 6
+Remove 2
+Remove 3
+Remove 4
+Add 0 10 24 5 6
+Add 1 3 15 1 10
+Add 2 28 20 8 13
+Add 3 29 28 0 9
+Add 4 13 13 4 7
+Add 5 28 21 3 12
+Add 6 29 24 11 2
+Remove 1
+Remove 0
+Remove 3
+Remove 6
+Remove 2
+Remove 4
+Remove 5
+Add 0 11 22 4 3
+Add 1 3 15 11 12
+Add 2 49 16 13 2
+Add 3 39 23 0 9
+Add 4 8 17 5 8
+Add 5 42 22 10 6
+Add 6 46 23 1 7
+Remove 3
+Remove 1
+Remove 4
+Remove 0
+Remove 5
+Remove 6
+Remove 2
+Add 0 42 15 5 6
+Add 1 45 17 3 8
+Add 2 13 17 9 4
+Add 3 26 27 1 10
+Add 4 6 29 12 7
+Add 5 46 14 0 11
+Add 6 43 11 13 2
+Remove 0
+Remove 4
+Remove 3
+Remove 5
+Remove 6
+Remove 2
+Remove 1
+Add 0 43 15 6 11
+Add 1 26 11 3 13
+Add 2 37 22 12 8
+Add 3 7 26 10 4
+Add 4 23 12 1 2
+Add 5 22 15 0 7
+Remove 1
+Add 6 36 26 9 5
+Remove 2
+Remove 0
+Remove 5
+Remove 4
+Remove 6
+Remove 3
+Add 0 11 22 4 3
+Add 1 3 15 11 12
+Add 2 49 16 13 2
+Add 3 39 23 0 9
+Add 4 8 17 5 8
+Add 5 42 22 10 6
+Add 6 46 23 1 7
+Remove 3
+Remove 1
+Remove 4
+Remove 0
+Remove 5
+Remove 6
+Remove 2
+Add 0 11 25 11 3
+Add 1 29 22 1 4
+Add 2 21 17 8 13
+Add 3 32 17 7 10
+Add 4 9 23 6 0
+Add 5 15 10 2 9
+Add 6 31 29 12 5
+Remove 2
+Remove 1
+Remove 5
+Remove 0
+Remove 3
+Remove 4
+Remove 6
+Add 0 44 19 10 13
+Add 1 41 30 8 2
+Add 2 24 29 0 12
+Add 3 23 15 1 4
+Add 4 47 23 9 7
+Add 5 14 18 5 11
+Remove 1
+Add 6 13 23 6 3
+Remove 3
+Remove 2
+Remove 0
+Remove 6
+Remove 5
+Remove 4
+Add 0 4 25 2 1
+Add 1 8 23 7 11
+Add 2 22 19 12 8
+Add 3 33 28 0 10
+Add 4 25 30 13 9
+Add 5 22 10 6 3
+Add 6 46 19 5 4
+Remove 3
+Remove 2
+Remove 0
+Remove 4
+Remove 1
+Remove 5
+Remove 6
+Add 0 5 21 8 11
+Add 1 33 29 7 4
+Add 2 47 14 13 9
+Add 3 35 27 1 12
+Add 4 13 12 2 3
+Add 5 15 25 10 5
+Add 6 20 15 0 6
+Remove 5
+Remove 4
+Remove 0
+Remove 6
+Remove 3
+Remove 2
+Remove 1
+Add 0 37 18 2 12
+Add 1 50 13 7 11
+Add 2 6 26 6 10
+Add 3 46 29 5 1
+Add 4 10 11 13 8
+Add 5 1 16 3 9
+Add 6 4 30 0 4
+Remove 1
+Remove 0
+Remove 2
+Remove 4
+Remove 3
+Remove 5
+Remove 6
+Add 0 8 10 10 7
+Add 1 43 23 3 1
+Add 2 45 22 4 8
+Add 3 8 22 2 0
+Add 4 22 15 11 12
+Remove 0
+Add 5 49 10 5 13
+Add 6 27 11 9 6
+Remove 1
+Remove 3
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 7 12 13 10
+Add 1 18 20 5 4
+Add 2 33 13 11 6
+Add 3 16 22 3 1
+Add 4 24 14 2 12
+Add 5 41 14 7 9
+Add 6 34 12 8 0
+Remove 0
+Remove 1
+Remove 5
+Remove 6
+Remove 2
+Remove 3
+Remove 4
+Add 0 26 10 7 2
+Add 1 48 27 11 8
+Add 2 8 23 1 13
+Add 3 20 27 9 0
+Add 4 41 28 12 6
+Add 5 11 17 4 5
+Add 6 37 24 10 3
+Remove 3
+Remove 0
+Remove 1
+Remove 6
+Remove 2
+Remove 4
+Remove 5
+Add 0 7 25 4 13
+Add 1 49 15 6 10
+Add 2 1 28 9 7
+Add 3 39 19 0 2
+Add 4 5 15 1 11
+Add 5 47 23 12 3
+Add 6 49 20 5 8
+Remove 1
+Remove 0
+Remove 4
+Remove 2
+Remove 3
+Remove 6
+Remove 5
+Add 0 10 24 5 6
+Add 1 3 15 1 10
+Add 2 28 20 8 13
+Add 3 29 28 0 9
+Add 4 13 13 4 7
+Add 5 28 21 3 12
+Add 6 29 24 11 2
+Remove 1
+Remove 0
+Remove 3
+Remove 6
+Remove 2
+Remove 4
+Remove 5
+Add 0 16 21 9 0
+Add 1 30 17 11 2
+Add 2 9 16 5 4
+Add 3 27 19 13 12
+Add 4 9 29 6 7
+Add 5 12 19 3 10
+Remove 0
+Add 6 25 11 1 8
+Remove 2
+Remove 1
+Remove 6
+Remove 3
+Remove 4
+Remove 5
+Add 0 3 25 0 5
+Add 1 42 20 13 9
+Add 2 4 24 8 7
+Add 3 22 26 6 2
+Add 4 31 18 1 3
+Add 5 39 14 4 11
+Add 6 34 21 10 12
+Remove 2
+Remove 4
+Remove 1
+Remove 0
+Remove 3
+Remove 5
+Remove 6
+Add 0 42 28 4 9
+Add 1 21 29 12 10
+Add 2 47 18 1 3
+Add 3 6 14 8 6
+Add 4 22 30 0 5
+Add 5 28 26 13 11
+Add 6 30 25 7 2
+Remove 1
+Remove 3
+Remove 4
+Remove 0
+Remove 6
+Remove 2
+Remove 5
+Add 0 50 13 0 4
+Add 1 13 21 2 9
+Add 2 16 11 8 5
+Add 3 29 17 10 1
+Add 4 20 29 3 12
+Add 5 6 14 13 7
+Add 6 24 29 6 11
+Remove 2
+Remove 0
+Remove 4
+Remove 1
+Remove 3
+Remove 6
+Remove 5
+Add 0 2 14 1 13
+Add 1 27 19 0 8
+Add 2 2 15 10 5
+Add 3 3 26 7 2
+Add 4 41 21 11 6
+Add 5 50 21 4 3
+Add 6 37 11 9 12
+Remove 1
+Remove 5
+Remove 0
+Remove 3
+Remove 6
+Remove 2
+Remove 4
+Add 0 43 28 13 10
+Add 1 37 28 5 7
+Add 2 37 12 4 0
+Add 3 7 27 1 12
+Add 4 37 16 3 6
+Remove 0
+Add 5 2 22 2 8
+Add 6 12 17 11 9
+Remove 3
+Remove 1
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 42 15 5 6
+Add 1 45 17 3 8
+Add 2 13 17 9 4
+Add 3 26 27 1 10
+Add 4 6 29 12 7
+Add 5 46 14 0 11
+Add 6 43 11 13 2
+Remove 0
+Remove 4
+Remove 3
+Remove 5
+Remove 6
+Remove 2
+Remove 1
+Add 0 45 27 4 7
+Add 1 23 18 1 11
+Add 2 11 29 2 5
+Add 3 28 16 3 6
+Add 4 45 19 9 12
+Add 5 31 28 8 0
+Add 6 17 22 10 13
+Remove 0
+Remove 3
+Remove 1
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 8 10 10 7
+Add 1 43 23 3 1
+Add 2 45 22 4 8
+Add 3 8 22 2 0
+Add 4 22 15 11 12
+Remove 0
+Add 5 49 10 5 13
+Add 6 27 11 9 6
+Remove 1
+Remove 3
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 43 28 13 10
+Add 1 37 28 5 7
+Add 2 37 12 4 0
+Add 3 7 27 1 12
+Add 4 37 16 3 6
+Remove 0
+Add 5 2 22 2 8
+Add 6 12 17 11 9
+Remove 3
+Remove 1
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 16 21 9 0
+Add 1 30 17 11 2
+Add 2 9 16 5 4
+Add 3 27 19 13 12
+Add 4 9 29 6 7
+Add 5 12 19 3 10
+Remove 0
+Add 6 25 11 1 8
+Remove 2
+Remove 1
+Remove 6
+Remove 3
+Remove 4
+Remove 5
+Add 0 50 13 0 4
+Add 1 13 21 2 9
+Add 2 16 11 8 5
+Add 3 29 17 10 1
+Add 4 20 29 3 12
+Add 5 6 14 13 7
+Add 6 24 29 6 11
+Remove 2
+Remove 0
+Remove 4
+Remove 1
+Remove 3
+Remove 6
+Remove 5
+Add 0 42 15 5 6
+Add 1 45 17 3 8
+Add 2 13 17 9 4
+Add 3 26 27 1 10
+Add 4 6 29 12 7
+Add 5 46 14 0 11
+Add 6 43 11 13 2
+Remove 0
+Remove 4
+Remove 3
+Remove 5
+Remove 6
+Remove 2
+Remove 1
+Add 0 26 10 7 2
+Add 1 48 27 11 8
+Add 2 8 23 1 13
+Add 3 20 27 9 0
+Add 4 41 28 12 6
+Add 5 11 17 4 5
+Add 6 37 24 10 3
+Remove 3
+Remove 0
+Remove 1
+Remove 6
+Remove 2
+Remove 4
+Remove 5
+Add 0 7 12 13 10
+Add 1 18 20 5 4
+Add 2 33 13 11 6
+Add 3 16 22 3 1
+Add 4 24 14 2 12
+Add 5 41 14 7 9
+Add 6 34 12 8 0
+Remove 0
+Remove 1
+Remove 5
+Remove 6
+Remove 2
+Remove 3
+Remove 4
+Add 0 11 25 11 3
+Add 1 29 22 1 4
+Add 2 21 17 8 13
+Add 3 32 17 7 10
+Add 4 9 23 6 0
+Add 5 15 10 2 9
+Add 6 31 29 12 5
+Remove 2
+Remove 1
+Remove 5
+Remove 0
+Remove 3
+Remove 4
+Remove 6
+Add 0 2 14 1 13
+Add 1 27 19 0 8
+Add 2 2 15 10 5
+Add 3 3 26 7 2
+Add 4 41 21 11 6
+Add 5 50 21 4 3
+Add 6 37 11 9 12
+Remove 1
+Remove 5
+Remove 0
+Remove 3
+Remove 6
+Remove 2
+Remove 4
+Add 0 3 25 0 5
+Add 1 42 20 13 9
+Add 2 4 24 8 7
+Add 3 22 26 6 2
+Add 4 31 18 1 3
+Add 5 39 14 4 11
+Add 6 34 21 10 12
+Remove 2
+Remove 4
+Remove 1
+Remove 0
+Remove 3
+Remove 5
+Remove 6
+Add 0 4 25 2 1
+Add 1 8 23 7 11
+Add 2 22 19 12 8
+Add 3 33 28 0 10
+Add 4 25 30 13 9
+Add 5 22 10 6 3
+Add 6 46 19 5 4
+Remove 3
+Remove 2
+Remove 0
+Remove 4
+Remove 1
+Remove 5
+Remove 6
+Add 0 42 28 4 9
+Add 1 21 29 12 10
+Add 2 47 18 1 3
+Add 3 6 14 8 6
+Add 4 22 30 0 5
+Add 5 28 26 13 11
+Add 6 30 25 7 2
+Remove 1
+Remove 3
+Remove 4
+Remove 0
+Remove 6
+Remove 2
+Remove 5
+Add 0 5 21 8 11
+Add 1 33 29 7 4
+Add 2 47 14 13 9
+Add 3 35 27 1 12
+Add 4 13 12 2 3
+Add 5 15 25 10 5
+Add 6 20 15 0 6
+Remove 5
+Remove 4
+Remove 0
+Remove 6
+Remove 3
+Remove 2
+Remove 1
+Add 0 43 15 6 11
+Add 1 26 11 3 13
+Add 2 37 22 12 8
+Add 3 7 26 10 4
+Add 4 23 12 1 2
+Add 5 22 15 0 7
+Remove 1
+Add 6 36 26 9 5
+Remove 2
+Remove 0
+Remove 5
+Remove 4
+Remove 6
+Remove 3
+Add 0 44 19 10 13
+Add 1 41 30 8 2
+Add 2 24 29 0 12
+Add 3 23 15 1 4
+Add 4 47 23 9 7
+Add 5 14 18 5 11
+Remove 1
+Add 6 13 23 6 3
+Remove 3
+Remove 2
+Remove 0
+Remove 6
+Remove 5
+Remove 4
+Add 0 7 25 4 13
+Add 1 49 15 6 10
+Add 2 1 28 9 7
+Add 3 39 19 0 2
+Add 4 5 15 1 11
+Add 5 47 23 12 3
+Add 6 49 20 5 8
+Remove 1
+Remove 0
+Remove 4
+Remove 2
+Remove 3
+Remove 6
+Remove 5
+Add 0 10 24 5 6
+Add 1 3 15 1 10
+Add 2 28 20 8 13
+Add 3 29 28 0 9
+Add 4 13 13 4 7
+Add 5 28 21 3 12
+Add 6 29 24 11 2
+Remove 1
+Remove 0
+Remove 3
+Remove 6
+Remove 2
+Remove 4
+Remove 5
+Add 0 11 22 4 3
+Add 1 3 15 11 12
+Add 2 49 16 13 2
+Add 3 39 23 0 9
+Add 4 8 17 5 8
+Add 5 42 22 10 6
+Add 6 46 23 1 7
+Remove 3
+Remove 1
+Remove 4
+Remove 0
+Remove 5
+Remove 6
+Remove 2
+Add 0 37 18 2 12
+Add 1 50 13 7 11
+Add 2 6 26 6 10
+Add 3 46 29 5 1
+Add 4 10 11 13 8
+Add 5 1 16 3 9
+Add 6 4 30 0 4
+Remove 1
+Remove 0
+Remove 2
+Remove 4
+Remove 3
+Remove 5
+Remove 6
+Add 0 45 27 4 7
+Add 1 23 18 1 11
+Add 2 11 29 2 5
+Add 3 28 16 3 6
+Add 4 45 19 9 12
+Add 5 31 28 8 0
+Add 6 17 22 10 13
+Remove 0
+Remove 3
+Remove 1
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 26 10 7 2
+Add 1 48 27 11 8
+Add 2 8 23 1 13
+Add 3 20 27 9 0
+Add 4 41 28 12 6
+Add 5 11 17 4 5
+Add 6 37 24 10 3
+Remove 3
+Remove 0
+Remove 1
+Remove 6
+Remove 2
+Remove 4
+Remove 5
+Add 0 2 14 1 13
+Add 1 27 19 0 8
+Add 2 2 15 10 5
+Add 3 3 26 7 2
+Add 4 41 21 11 6
+Add 5 50 21 4 3
+Add 6 37 11 9 12
+Remove 1
+Remove 5
+Remove 0
+Remove 3
+Remove 6
+Remove 2
+Remove 4
+Add 0 45 27 4 7
+Add 1 23 18 1 11
+Add 2 11 29 2 5
+Add 3 28 16 3 6
+Add 4 45 19 9 12
+Add 5 31 28 8 0
+Add 6 17 22 10 13
+Remove 0
+Remove 3
+Remove 1
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 43 28 13 10
+Add 1 37 28 5 7
+Add 2 37 12 4 0
+Add 3 7 27 1 12
+Add 4 37 16 3 6
+Remove 0
+Add 5 2 22 2 8
+Add 6 12 17 11 9
+Remove 3
+Remove 1
+Remove 2
+Remove 4
+Remove 6
+Remove 5
+Add 0 42 28 4 9
+Add 1 21 29 12 10
+Add 2 47 18 1 3
+Add 3 6 14 8 6
+Add 4 22 30 0 5
+Add 5 28 26 13 11
+Add 6 30 25 7 2
+Remove 1
+Remove 3
+Remove 4
+Remove 0
+Remove 6
+Remove 2
+Remove 5
+Add 0 4 25 2 1
+Add 1 8 23 7 11
+Add 2 22 19 12 8
+Add 3 33 28 0 10
+Add 4 25 30 13 9
+Add 5 22 10 6 3
+Add 6 46 19 5 4
+Remove 3
+Remove 2
+Remove 0
+Remove 4
+Remove 1
+Remove 5
+Remove 6
+Add 0 16 21 9 0
+Add 1 30 17 11 2
+Add 2 9 16 5 4
+Add 3 27 19 13 12
+Add 4 9 29 6 7
+Add 5 12 19 3 10
+Remove 0
+Add 6 25 11 1 8
+Remove 2
+Remove 1
+Remove 6
+Remove 3
+Remove 4
+Remove 5
+Add 0 43 15 6 11
+Add 1 26 11 3 13
+Add 2 37 22 12 8
+Add 3 7 26 10 4
+Add 4 23 12 1 2
+Add 5 22 15 0 7
+Remove 1
+Add 6 36 26 9 5
+Remove 2
+Remove 0
+Remove 5
+Remove 4
+Remove 6
+Remove 3
+Add 0 44 19 10 13
+Add 1 41 30 8 2
+Add 2 24 29 0 12
+Add 3 23 15 1 4
+Add 4 47 23 9 7
+Add 5 14 18 5 11
+Remove 1
+Add 6 13 23 6 3
+Remove 3
+Remove 2
+Remove 0
+Remove 6
+Remove 5
+Remove 4
+Add 0 5 21 8 11
+Add 1 33 29 7 4
+Add 2 47 14 13 9
+Add 3 35 27 1 12
+Add 4 13 12 2 3
+Add 5 15 25 10 5
+Add 6 20 15 0 6
+Remove 5
+Remove 4
+Remove 0
+Remove 6
+Remove 3
+Remove 2
+Remove 1
+Add 0 37 18 2 12
+Add 1 50 13 7 11
+Add 2 6 26 6 10
+Add 3 46 29 5 1
+Add 4 10 11 13 8
+Add 5 1 16 3 9
+Add 6 4 30 0 4
+Remove 1
+Remove 0
+Remove 2
+Remove 4
+Remove 3
+Remove 5
+Remove 6
+Add 0 11 22 4 3
+Add 1 3 15 11 12
+Add 2 49 16 13 2
+Add 3 39 23 0 9
+Add 4 8 17 5 8
+Add 5 42 22 10 6
+Add 6 46 23 1 7
+Remove 3
+Remove 1
+Remove 4
+Remove 0
+Remove 5
+Remove 6
+Remove 2
+Add 0 7 25 4 13
+Add 1 49 15 6 10
+Add 2 1 28 9 7
+Add 3 39 19 0 2
+Add 4 5 15 1 11
+Add 5 47 23 12 3
+Add 6 49 20 5 8
+Remove 1
+Remove 0
+Remove 4
+Remove 2
+Remove 3
+Remove 6
+Remove 5
+Add 0 8 10 10 7
+Add 1 43 23 3 1
+Add 2 45 22 4 8
+Add 3 8 22 2 0
+Add 4 22 15 11 12
+Remove 0
+Add 5 49 10 5 13
+Add 6 27 11 9 6
+Remove 1
+Remove 3
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 50 13 0 4
+Add 1 13 21 2 9
+Add 2 16 11 8 5
+Add 3 29 17 10 1
+Add 4 20 29 3 12
+Add 5 6 14 13 7
+Add 6 24 29 6 11
+Remove 2
+Remove 0
+Remove 4
+Remove 1
+Remove 3
+Remove 6
+Remove 5
+Add 0 10 24 5 6
+Add 1 3 15 1 10
+Add 2 28 20 8 13
+Add 3 29 28 0 9
+Add 4 13 13 4 7
+Add 5 28 21 3 12
+Add 6 29 24 11 2
+Remove 1
+Remove 0
+Remove 3
+Remove 6
+Remove 2
+Remove 4
+Remove 5
+Add 0 11 25 11 3
+Add 1 29 22 1 4
+Add 2 21 17 8 13
+Add 3 32 17 7 10
+Add 4 9 23 6 0
+Add 5 15 10 2 9
+Add 6 31 29 12 5
+Remove 2
+Remove 1
+Remove 5
+Remove 0
+Remove 3
+Remove 4
+Remove 6
+Add 0 7 12 13 10
+Add 1 18 20 5 4
+Add 2 33 13 11 6
+Add 3 16 22 3 1
+Add 4 24 14 2 12
+Add 5 41 14 7 9
+Add 6 34 12 8 0
+Remove 0
+Remove 1
+Remove 5
+Remove 6
+Remove 2
+Remove 3
+Remove 4
+Add 0 42 15 5 6
+Add 1 45 17 3 8
+Add 2 13 17 9 4
+Add 3 26 27 1 10
+Add 4 6 29 12 7
+Add 5 46 14 0 11
+Add 6 43 11 13 2
+Remove 0
+Remove 4
+Remove 3
+Remove 5
+Remove 6
+Remove 2
+Remove 1
+Add 0 3 25 0 5
+Add 1 42 20 13 9
+Add 2 4 24 8 7
+Add 3 22 26 6 2
+Add 4 31 18 1 3
+Add 5 39 14 4 11
+Add 6 34 21 10 12
+Remove 2
+Remove 4
+Remove 1
+Remove 0
+Remove 3
+Remove 5
+Remove 6
+Add 0 43 15 6 11
+Add 1 26 11 3 13
+Add 2 37 22 12 8
+Add 3 7 26 10 4
+Add 4 23 12 1 2
+Add 5 22 15 0 7
+Remove 1
+Add 6 36 26 9 5
+Remove 2
+Remove 0
+Remove 5
+Remove 4
+Remove 6
+Remove 3
+Add 0 44 19 10 13
+Add 1 41 30 8 2
+Add 2 24 29 0 12
+Add 3 23 15 1 4
+Add 4 47 23 9 7
+Add 5 14 18 5 11
+Remove 1
+Add 6 13 23 6 3
+Remove 3
+Remove 2
+Remove 0
+Remove 6
+Remove 5
+Remove 4
+Add 0 8 10 10 7
+Add 1 43 23 3 1
+Add 2 45 22 4 8
+Add 3 8 22 2 0
+Add 4 22 15 11 12
+Remove 0
+Add 5 49 10 5 13
+Add 6 27 11 9 6
+Remove 1
+Remove 3
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 45 27 4 7
+Add 1 23 18 1 11
+Add 2 11 29 2 5
+Add 3 28 16 3 6
+Add 4 45 19 9 12
+Add 5 31 28 8 0
+Add 6 17 22 10 13
+Remove 0
+Remove 3
+Remove 1
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 3 25 0 5
+Add 1 42 20 13 9
+Add 2 4 24 8 7
+Add 3 22 26 6 2
+Add 4 31 18 1 3
+Add 5 39 14 4 11
+Add 6 34 21 10 12
+Remove 2
+Remove 4
+Remove 1
+Remove 0
+Remove 3
+Remove 5
+Remove 6
+Add 0 7 25 4 13
+Add 1 49 15 6 10
+Add 2 1 28 9 7
+Add 3 39 19 0 2
+Add 4 5 15 1 11
+Add 5 47 23 12 3
+Add 6 49 20 5 8
+Remove 1
+Remove 0
+Remove 4
+Remove 2
+Remove 3
+Remove 6
+Remove 5
+Add 0 5 21 8 11
+Add 1 33 29 7 4
+Add 2 47 14 13 9
+Add 3 35 27 1 12
+Add 4 13 12 2 3
+Add 5 15 25 10 5
+Add 6 20 15 0 6
+Remove 5
+Remove 4
+Remove 0
+Remove 6
+Remove 3
+Remove 2
+Remove 1
+Add 0 2 14 1 13
+Add 1 27 19 0 8
+Add 2 2 15 10 5
+Add 3 3 26 7 2
+Add 4 41 21 11 6
+Add 5 50 21 4 3
+Add 6 37 11 9 12
+Remove 1
+Remove 5
+Remove 0
+Remove 3
+Remove 6
+Remove 2
+Remove 4
+Add 0 10 24 5 6
+Add 1 3 15 1 10
+Add 2 28 20 8 13
+Add 3 29 28 0 9
+Add 4 13 13 4 7
+Add 5 28 21 3 12
+Add 6 29 24 11 2
+Remove 1
+Remove 0
+Remove 3
+Remove 6
+Remove 2
+Remove 4
+Remove 5
+Add 0 50 13 0 4
+Add 1 13 21 2 9
+Add 2 16 11 8 5
+Add 3 29 17 10 1
+Add 4 20 29 3 12
+Add 5 6 14 13 7
+Add 6 24 29 6 11
+Remove 2
+Remove 0
+Remove 4
+Remove 1
+Remove 3
+Remove 6
+Remove 5
+Add 0 42 15 5 6
+Add 1 45 17 3 8
+Add 2 13 17 9 4
+Add 3 26 27 1 10
+Add 4 6 29 12 7
+Add 5 46 14 0 11
+Add 6 43 11 13 2
+Remove 0
+Remove 4
+Remove 3
+Remove 5
+Remove 6
+Remove 2
+Remove 1
+Add 0 11 25 11 3
+Add 1 29 22 1 4
+Add 2 21 17 8 13
+Add 3 32 17 7 10
+Add 4 9 23 6 0
+Add 5 15 10 2 9
+Add 6 31 29 12 5
+Remove 2
+Remove 1
+Remove 5
+Remove 0
+Remove 3
+Remove 4
+Remove 6
+Add 0 42 28 4 9
+Add 1 21 29 12 10
+Add 2 47 18 1 3
+Add 3 6 14 8 6
+Add 4 22 30 0 5
+Add 5 28 26 13 11
+Add 6 30 25 7 2
+Remove 1
+Remove 3
+Remove 4
+Remove 0
+Remove 6
+Remove 2
+Remove 5
+Add 0 43 28 13 10
+Add 1 37 28 5 7
+Add 2 37 12 4 0
+Add 3 7 27 1 12
+Add 4 37 16 3 6
+Remove 0
+Add 5 2 22 2 8
+Add 6 12 17 11 9
+Remove 3
+Remove 1
+Remove 4
+Remove 2
+Remove 5
+Remove 6
+Add 0 26 10 7 2
+Add 1 48 27 11 8
+Add 2 8 23 1 13
+Add 3 20 27 9 0
+Add 4 41 28 12 6
+Add 5 11 17 4 5
+Add 6 37 24 10 3
+Remove 3
+Remove 0
+Remove 1
+Remove 6
+Remove 2
+Remove 4
+Remove 5
+Add 0 37 18 2 12
+Add 1 50 13 7 11
+Add 2 6 26 6 10
+Add 3 46 29 5 1
+Add 4 10 11 13 8
+Add 5 1 16 3 9
+Add 6 4 30 0 4
+Remove 1
+Remove 0
+Remove 2
+Remove 4
+Remove 3
+Remove 5
+Remove 6
+Add 0 7 12 13 10
+Add 1 18 20 5 4
+Add 2 33 13 11 6
+Add 3 16 22 3 1
+Add 4 24 14 2 12
+Add 5 41 14 7 9
+Add 6 34 12 8 0
+Remove 0
+Remove 1
+Remove 5
+Remove 6
+Remove 2
+Remove 3
+Remove 4
+Add 0 16 21 9 0
+Add 1 30 17 11 2
+Add 2 9 16 5 4
+Add 3 27 19 13 12
+Add 4 9 29 6 7
+Add 5 12 19 3 10
+Remove 0
+Add 6 25 11 1 8
+Remove 2
+Remove 1
+Remove 6
+Remove 3
+Remove 4
+Remove 5
+Add 0 4 25 2 1
+Add 1 8 23 7 11
+Add 2 22 19 12 8
+Add 3 33 28 0 10
+Add 4 25 30 13 9
+Add 5 22 10 6 3
+Add 6 46 19 5 4
+Remove 3
+Remove 2
+Remove 0
+Remove 4
+Remove 1
+Remove 5
+Remove 6
+Add 0 11 22 4 3
+Add 1 3 15 11 12
+Add 2 49 16 13 2
+Add 3 39 23 0 9
+Add 4 8 17 5 8
+Add 5 42 22 10 6
+Add 6 46 23 1 7
+Remove 3
+Remove 1
+Remove 4
+Remove 0
+Remove 5
+Remove 6
+Remove 2
+Add 0 43 28 13 10
+Add 1 37 28 5 7
+Add 2 37 12 4 0
+Add 3 7 27 1 12
+Add 4 37 16 3 6
+Remove 0
+Add 5 2 22 2 8
+Add 6 12 17 11 9
+Remove 3
+Remove 2
+Remove 4
+Remove 1
+Remove 5
+Remove 6
+Add 0 5 21 8 11
+Add 1 33 29 7 4
+Add 2 47 14 13 9
+Add 3 35 27 1 12
+Add 4 13 12 2 3
+Add 5 15 25 10 5
+Add 6 20 15 0 6
+Remove 5
+Remove 4
+Remove 0
+Remove 6
+Remove 3
+Remove 2
+Remove 1
+Add 0 44 19 10 13
+Add 1 41 30 8 2
+Add 2 24 29 0 12
+Add 3 23 15 1 4
+Add 4 47 23 9 7
+Add 5 14 18 5 11
+Remove 1
+Add 6 13 23 6 3
+Remove 3
+Remove 2
+Remove 0
+Remove 6
+Remove 5
+Remove 4
+Add 0 7 25 4 13
+Add 1 49 15 6 10
+Add 2 1 28 9 7
+Add 3 39 19 0 2
+Add 4 5 15 1 11
+Add 5 47 23 12 3
+Add 6 49 20 5 8
+Remove 1
+Remove 0
+Remove 4
+Remove 2
+Remove 3
+Remove 6
+Remove 5
+Add 0 16 21 9 0
+Add 1 30 17 11 2
+Add 2 9 16 5 4
+Add 3 27 19 13 12
+Add 4 9 29 6 7
+Add 5 12 19 3 10
+Remove 0
+Add 6 25 11 1 8
+Remove 2
+Remove 1
+Remove 6
+Remove 3
+Remove 4
+Remove 5
+Add 0 11 22 4 3
+Add 1 3 15 11 12
+Add 2 49 16 13 2
+Add 3 39 23 0 9
+Add 4 8 17 5 8
+Add 5 42 22 10 6
+Add 6 46 23 1 7
+Remove 3
+Remove 1
+Remove 4
+Remove 0
+Remove 5
+Remove 6
+Remove 2
+Add 0 45 27 4 7
+Add 1 23 18 1 11
+Add 2 11 29 2 5
+Add 3 28 16 3 6
+Add 4 45 19 9 12
+Add 5 31 28 8 0
+Add 6 17 22 10 13
+Remove 0
+Remove 3
+Remove 1
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 42 15 5 6
+Add 1 45 17 3 8
+Add 2 13 17 9 4
+Add 3 26 27 1 10
+Add 4 6 29 12 7
+Add 5 46 14 0 11
+Add 6 43 11 13 2
+Remove 0
+Remove 4
+Remove 3
+Remove 5
+Remove 6
+Remove 2
+Remove 1
+Add 0 50 13 0 4
+Add 1 13 21 2 9
+Add 2 16 11 8 5
+Add 3 29 17 10 1
+Add 4 20 29 3 12
+Add 5 6 14 13 7
+Add 6 24 29 6 11
+Remove 2
+Remove 0
+Remove 4
+Remove 1
+Remove 3
+Remove 6
+Remove 5
+Add 0 3 25 0 5
+Add 1 42 20 13 9
+Add 2 4 24 8 7
+Add 3 22 26 6 2
+Add 4 31 18 1 3
+Add 5 39 14 4 11
+Add 6 34 21 10 12
+Remove 2
+Remove 4
+Remove 1
+Remove 0
+Remove 3
+Remove 5
+Remove 6
+Add 0 10 24 5 6
+Add 1 3 15 1 10
+Add 2 28 20 8 13
+Add 3 29 28 0 9
+Add 4 13 13 4 7
+Add 5 28 21 3 12
+Add 6 29 24 11 2
+Remove 1
+Remove 0
+Remove 3
+Remove 6
+Remove 2
+Remove 4
+Remove 5
+Add 0 4 25 2 1
+Add 1 8 23 7 11
+Add 2 22 19 12 8
+Add 3 33 28 0 10
+Add 4 25 30 13 9
+Add 5 22 10 6 3
+Add 6 46 19 5 4
+Remove 3
+Remove 2
+Remove 0
+Remove 4
+Remove 1
+Remove 5
+Remove 6
+Add 0 43 15 6 11
+Add 1 26 11 3 13
+Add 2 37 22 12 8
+Add 3 7 26 10 4
+Add 4 23 12 1 2
+Add 5 22 15 0 7
+Remove 1
+Add 6 36 26 9 5
+Remove 2
+Remove 0
+Remove 5
+Remove 4
+Remove 6
+Remove 3
+Add 0 42 28 4 9
+Add 1 21 29 12 10
+Add 2 47 18 1 3
+Add 3 6 14 8 6
+Add 4 22 30 0 5
+Add 5 28 26 13 11
+Add 6 30 25 7 2
+Remove 1
+Remove 3
+Remove 4
+Remove 0
+Remove 6
+Remove 2
+Remove 5
+Add 0 37 18 2 12
+Add 1 50 13 7 11
+Add 2 6 26 6 10
+Add 3 46 29 5 1
+Add 4 10 11 13 8
+Add 5 1 16 3 9
+Add 6 4 30 0 4
+Remove 1
+Remove 0
+Remove 2
+Remove 4
+Remove 3
+Remove 5
+Remove 6
+Add 0 8 10 10 7
+Add 1 43 23 3 1
+Add 2 45 22 4 8
+Add 3 8 22 2 0
+Add 4 22 15 11 12
+Remove 0
+Add 5 49 10 5 13
+Add 6 27 11 9 6
+Remove 1
+Remove 3
+Remove 2
+Remove 4
+Remove 5
+Remove 6
+Add 0 11 25 11 3
+Add 1 29 22 1 4
+Add 2 21 17 8 13
+Add 3 32 17 7 10
+Add 4 9 23 6 0
+Add 5 15 10 2 9
+Add 6 31 29 12 5
+Remove 2
+Remove 1
+Remove 5
+Remove 0
+Remove 3
+Remove 4
+Remove 6
+Add 0 7 12 13 10
+Add 1 18 20 5 4
+Add 2 33 13 11 6
+Add 3 16 22 3 1
+Add 4 24 14 2 12
+Add 5 41 14 7 9
+Add 6 34 12 8 0
+Remove 0
+Remove 1
+Remove 5
+Remove 6
+Remove 2
+Remove 3
+Remove 4
+Add 0 26 10 7 2
+Add 1 48 27 11 8
+Add 2 8 23 1 13
+Add 3 20 27 9 0
+Add 4 41 28 12 6
+Add 5 11 17 4 5
+Add 6 37 24 10 3
+Remove 3
+Remove 0
+Remove 1
+Remove 6
+Remove 2
+Remove 4
+Remove 5
+Add 0 2 14 1 13
+Add 1 27 19 0 8
+Add 2 2 15 10 5
+Add 3 3 26 7 2
+Add 4 41 21 11 6
+Add 5 50 21 4 3
+Add 6 37 11 9 12
+Remove 1
+Remove 5
+Remove 0
+Remove 3
+Remove 6
+Remove 2
+Remove 4
+Add 0 26 10 7 2
+Add 1 48 27 11 8
+Add 2 8 23 1 13
+Add 3 20 27 9 0
+Add 4 41 28 12 6
+Add 5 11 17 4 5
+Add 6 37 24 10 3
+Remove 3
+Remove 0
+Remove 1
+Remove 6
+Remove 2
+Remove 4
+Remove 5
+Add 0 8 10 10 7
+Add 1 43 23 3 1
+Add 2 45 22 4 8
+Add 3 8 22 2 0
+Add 4 22 15 11 12
+Remove 0
+Add 5 49 10 5 13
+Add 6 27 11 9 6
+Remove 1
+Remove 3
+Remove 4
+Remove 2
+Remove 5
+Remove 6
+Add 0 44 19 10 13
+Add 1 41 30 8 2
+Add 2 24 29 0 12
+Add 3 23 15 1 4
+Add 4 47 23 9 7
+Add 5 14 18 5 11
+Remove 1
+Add 6 13 23 6 3
+Remove 3
+Remove 2
+Remove 0
+Remove 6
+Remove 5
+Remove 4
+Add 0 5 21 8 11
+Add 1 33 29 7 4
+Add 2 47 14 13 9
+Add 3 35 27 1 12
+Add 4 13 12 2 3
+Add 5 15 25 10 5
+Add 6 20 15 0 6
+Remove 5
+Remove 4
+Remove 0
+Remove 6
+Remove 3
+Remove 2
+Remove 1
+Add 0 16 21 9 0
+Add 1 30 17 11 2
+Add 2 9 16 5 4
+Add 3 27 19 13 12
+Add 4 9 29 6 7
+Add 5 12 19 3 10
+Remove 0
+Add 6 25 11 1 8
+Remove 2
+Remove 1
+Remove 6
+Remove 3
+Remove 4
+Remove 5
+Add 0 11 25 11 3
+Add 1 29 22 1 4
+Add 2 21 17 8 13
+Add 3 32 17 7 10
+Add 4 9 23 6 0
+Add 5 15 10 2 9
+Add 6 31 29 12 5
+Remove 2
+Remove 1
+Remove 5
+Remove 0
+Remove 3
+Remove 4
+Remove 6
+Add 0 43 15 6 11
+Add 1 26 11 3 13
+Add 2 37 22 12 8
+Add 3 7 26 10 4
+Add 4 23 12 1 2
+Add 5 22 15 0 7
+Remove 1
+Add 6 36 26 9 5
+Remove 2
+Remove 0
+Remove 5
+Remove 4
+Add 1 21 29 12 10
+Add 2 47 18 1 3
