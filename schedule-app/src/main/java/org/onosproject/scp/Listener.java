@@ -65,6 +65,7 @@ public class Listener extends Thread {
                 
                 }else if(vals[0].equals("update")){
                     AppComponent.rl.updateModel();
+                    AppComponent.customLogger.reqManger("Update Model");
                 }else{
                     // finish episode
                     // TODO run in separate thread

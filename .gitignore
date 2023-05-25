@@ -1,4 +1,2 @@
-/network_data/models/*
-/pcap_captures/*
-/network_data/pcap_captures/star_1_5_100.pcap
-/network_data/pcap_captures/star_1_5.pcapng
+/schedule-app/dlmodel/lightning_logs
+/schedule-app/dlmodel/wandb
