@@ -1,0 +1,7 @@
+20230604142406,10.0.0.3,65525,10.0.0.1,34438,3,0.0-26.0,80963190,24912623,45.024,2881,57958,4.971,36515
+read failed: Connection refused
+recvmsg failed: Connection refused
+20230604142406,10.0.0.3,65525,10.0.0.1,34438,4,0.0-0.0,0,0,0.000,0,0,-nan,0
+[  4] WARNING: ack of last datagram failed after 10 tries.
+recvmsg failed: Connection refused
+20230604142407,10.0.0.3,65525,10.0.0.1,34438,3,0.0-0.0,102900,16601794,0.265,57887,57957,99.879,0

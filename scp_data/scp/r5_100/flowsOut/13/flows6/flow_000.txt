@@ -1,0 +1,5 @@
+recvmsg failed: Interrupted system call
+20230608174655,10.0.0.14,65525,10.0.0.6,49911,3,0.0-285.6,20297760,568577,0.494,11838,25646,46.159,0
+[  3] WARNING: ack of last datagram failed after 10 tries.
+recvmsg failed: Connection refused
+20230608174655,10.0.0.14,65525,10.0.0.6,49911,4,0.0-0.1,220500,20548902,17326.186,25990,26140,99.426,0

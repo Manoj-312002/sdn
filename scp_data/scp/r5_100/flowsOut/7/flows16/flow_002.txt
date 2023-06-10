@@ -1,0 +1,8 @@
+20230608160503,10.0.0.5,65525,10.0.0.6,55634,3,0.0-16.1,45033450,22355875,44.329,22152,52787,41.965,10938
+read failed: Connection refused
+recvmsg failed: Connection refused
+20230608160503,10.0.0.5,65525,10.0.0.6,55634,4,0.0-0.0,0,0,0.000,0,0,-nan,0
+read failed: Connection refused
+recvmsg failed: Interrupted system call
+20230608162221,10.0.0.5,65525,10.0.0.6,55634,3,0.0-1037.9,45570,351,0.731,52755,52786,99.941,0
+read failed: Connection refused

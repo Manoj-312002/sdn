@@ -224,8 +224,8 @@ public class Graph {
         }else{
             i1 = rd.nextInt(scores.length); i2 = rd.nextInt(scores.length);
 
-            AppComponent.customLogger.splitting("Maximise " + Integer.toString(reqId) + " " + pths.get(i1).toString());
-            AppComponent.customLogger.splitting("Maximise " + Integer.toString(reqId) + " " + pths.get(i2).toString());
+            AppComponent.customLogger.splitting("Maximise_R " + Integer.toString(reqId) + " " + pths.get(i1).toString());
+            AppComponent.customLogger.splitting("Maximise_R " + Integer.toString(reqId) + " " + pths.get(i2).toString());
 
             rq.addPath( pths.get(i1) , convertPath(pths.get(i1), rq.srci));
             rq.addPath( pths.get(i2) , convertPath(pths.get(i2), rq.srci));

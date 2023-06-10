@@ -26,7 +26,7 @@ cfg = dict(
     stateD = 86,
     lyrs = [40,20,1],
     name="scp",
-    sleep=100
+    sleep=200
 )
 
 torch.manual_seed(10)
@@ -99,8 +99,9 @@ class model(pl.LightningModule):
     
 
     def on_train_epoch_end(self):
-        dt = {"train/loss" : self.loss_t/self.ct_t }
-        if wandb : wandb.log(dt)
+        # dt = {"train/loss" : self.loss_t/self.ct_t }
+        ar.append(self.loss_t/self.ct_t)
+        # if wandb : wandb.log(dt)
         
         self.loss_t = 0
         self.ct_t = 0        
@@ -119,14 +120,15 @@ def epoch_ct():
             yield 20
         elif ct < 20:
             yield 30
-        elif ct < 60:
-            yield 50
+        # elif ct < 60:
+        #     yield 50
         else:
             yield cfg["epochs"]
 
 ep = epoch_ct()
 
 import socket
+
 while True:
     df = pd.read_csv(ds)
     
@@ -151,5 +153,7 @@ while True:
     
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.sendto(bytes("update", "utf-8"), ("localhost", 4445))
-
+    
+    if wandb : wandb.log({ "train/step_loss" : sum(ar) / len(ar)  })
+    ar = []
     time.sleep(cfg["sleep"])

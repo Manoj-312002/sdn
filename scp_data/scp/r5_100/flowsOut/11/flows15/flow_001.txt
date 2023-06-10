@@ -1,0 +1,7 @@
+20230608165956,10.0.0.14,65525,10.0.0.10,35561,3,0.0-34.1,120519420,28308861,33.430,15027,97013,15.490,44664
+[  3] WARNING: ack of last datagram failed after 10 tries.
+recvmsg failed: Connection refused
+20230608165956,10.0.0.14,65525,10.0.0.10,35561,4,0.0-0.0,0,0,0.000,0,0,-nan,0
+[  4] WARNING: ack of last datagram failed after 10 tries.
+recvmsg failed: Interrupted system call
+20230608174655,10.0.0.14,65525,10.0.0.10,35561,3,0.0-2819.1,26460,75,0.319,96993,97011,99.981,0
